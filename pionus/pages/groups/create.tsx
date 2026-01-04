@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function create() {
   return (
-    <div>create</div>
-  )
+    <div>
+      <h1 className="text-2xl text-teal-400">groups</h1>
+    </div>
+  );
 }
 
-export default create
+export default create;
