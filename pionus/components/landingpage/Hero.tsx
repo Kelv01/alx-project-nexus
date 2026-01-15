@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import background from "../../public/sutirta.webp";
-import Button from "./Button";
+import Button from "../common/Button";
 import { Search, Users } from "lucide-react";
 
 function Hero() {
