@@ -1,12 +1,11 @@
-import Image from "next/image";
-import background from "../public/sutirta.jpg";
+import Hero from "@/components/common/Hero";
+import WhyChoosePionusSafari from "@/components/common/WhyChoosePionusSafari";
 
 export default function Home() {
   return (
-    <section>
-      <div className="w-full h">
-        <Image src={background} alt="backround image" priority />
-      </div>
-    </section>
+    <>
+      <Hero />
+      <WhyChoosePionusSafari />
+    </>
   );
 }

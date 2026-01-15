@@ -8,19 +8,6 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(false);
 
-  // type Navlink = {
-  //   id: string;
-  //   name: string;
-  //   href: string;
-  // };
-
-  // const navLinks: Navlink[] = [
-  //   { id: "home", name: "Home", href: "/" },
-  //   { id: "tours", name: "Tours", href: "/tours/tours" },
-  //   { id: "groups", name: "Groups", href: "/groups/create" },
-  //   { id: "about", name: "About", href: "/about/about" },
-  // ];
-
   const router = useRouter();
 
   return (
@@ -88,7 +75,7 @@ function Header() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 bg-[#a37152] text-white transform ${
+        className={`fixed top-0 right-0 h-full w-2/3 bg-merino-600 text-white transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden z-50`}
       >
@@ -105,7 +92,7 @@ function Header() {
                 href={link.href}
                 className={`${
                   router.pathname === link.href
-                    ? "text-[#e4d6c4] font-bold"
+                    ? "text-shadow-merino-200 font-bold"
                     : "text-white"
                 }`}
               >
