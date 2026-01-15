@@ -1,6 +1,6 @@
 # Pionus Safaris - Frontend
 
-A modern web platform for booking and managing safari tours in Nairobi. Built with [Next.js](https://nextjs.org) and TypeScript, providing an intuitive interface for travelers to discover, book, and manage group safaris.
+A modern web platform for booking and managing safari tours in East Africa. Built with [Next.js](https://nextjs.org) and TypeScript, providing an intuitive interface for travelers to discover, book, and manage group safaris.
 
 ## Features
 
