@@ -27,7 +27,7 @@ function TourCard({
         />
         {verified && (
           <div className="absolute top-4 right-4">
-            <Verified />
+            <Verified className="text-green-600" />
           </div>
         )}
       </div>
