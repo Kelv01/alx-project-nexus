@@ -115,7 +115,7 @@ function Header() {
           ) : (
             <Link
               href="/signin"
-              className="bg-[#bf9b78] text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
+              className="bg-400 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <UserLock className="h-4 w-4" />
               <span>Sign In</span>

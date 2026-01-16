@@ -1,0 +1,408 @@
+export const tours = [
+  {
+    id: "1",
+    title: "Serengeti Migration Safari",
+    location: "Tanzania",
+    duration: "7 days",
+    price: 3200,
+    image: "/tours/zebras.jpg",
+    groupSize: "4-12 people",
+    verified: true,
+    description:
+      "Witness the greatest wildlife spectacle on Earth as millions of wildebeest and zebra traverse the Serengeti plains. This incredible journey includes luxury tented camps, expert guides, and unforgettable game drives through one of Africa's most iconic landscapes.",
+    highlights: [
+      "Witness the Great Migration",
+      "Game drives in Serengeti National Park",
+      "Visit Ngorongoro Crater",
+      "Luxury tented accommodation",
+      "Expert wildlife photography guidance",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival in Arusha",
+        description: "Meet your guide and prepare for adventure",
+      },
+      {
+        day: 2,
+        title: "Serengeti National Park",
+        description: "Full day game drive",
+      },
+      { day: 3, title: "Central Serengeti", description: "Migration tracking" },
+      {
+        day: 4,
+        title: "Northern Serengeti",
+        description: "River crossings observation",
+      },
+      {
+        day: 5,
+        title: "Ngorongoro Crater",
+        description: "Crater floor exploration",
+      },
+      { day: 6, title: "Lake Manyara", description: "Tree-climbing lions" },
+      { day: 7, title: "Departure", description: "Transfer to airport" },
+    ],
+    guide: {
+      name: "John Kamau",
+      license: "TZ-GUIDE-2024-1234",
+      experience: "12 years",
+      languages: ["English", "Swahili", "German"],
+      rating: 4.9,
+      totalReviews: 142,
+      photo:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
+    },
+  },
+  {
+    id: "2",
+    title: "Masai Mara Big Five Adventure",
+    location: "Kenya",
+    duration: "5 days",
+    price: 2400,
+    image: "/tours/lion.jpg",
+    groupSize: "6-10 people",
+    verified: true,
+    description:
+      "Experience the magic of Kenya's most famous game reserve. Track the Big Five across the golden savannah, stay in authentic safari camps, and immerse yourself in Masai culture.",
+    highlights: [
+      "Search for the Big Five",
+      "Hot air balloon safari option",
+      "Masai village cultural visit",
+      "Luxury safari lodge accommodation",
+      "Professional wildlife guide",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Nairobi to Masai Mara",
+        description: "Scenic drive and afternoon game drive",
+      },
+      {
+        day: 2,
+        title: "Full Day Mara",
+        description: "Dawn and dusk game drives",
+      },
+      {
+        day: 3,
+        title: "Mara River",
+        description: "River wildlife and optional balloon safari",
+      },
+      {
+        day: 4,
+        title: "Cultural Experience",
+        description: "Masai village visit and game drive",
+      },
+      {
+        day: 5,
+        title: "Return to Nairobi",
+        description: "Morning drive and transfer",
+      },
+    ],
+    guide: {
+      name: "Sarah Mwangi",
+      license: "KE-GUIDE-2023-5678",
+      experience: "8 years",
+      languages: ["English", "Swahili", "French"],
+      rating: 4.8,
+      totalReviews: 98,
+      photo:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200",
+    },
+  },
+  {
+    id: "3",
+    title: "Kilimanjaro & Safari Combo",
+    location: "Tanzania",
+    duration: "10 days",
+    price: 4500,
+    image: "/tours/kilimanjaro.jpg",
+    groupSize: "4-8 people",
+    verified: true,
+    description:
+      "Combine the ultimate African adventure: summit Africa's highest peak via the Machame Route, then recover on an incredible safari through Tanzania's best parks.",
+    highlights: [
+      "Summit Mount Kilimanjaro (5,895m)",
+      "Machame Route trek",
+      "Serengeti and Ngorongoro safari",
+      "Experienced mountain and safari guides",
+      "All permits and park fees included",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival",
+        description: "Moshi briefing and preparation",
+      },
+      {
+        day: 2,
+        title: "Machame Gate to Camp",
+        description: "Begin Kilimanjaro trek",
+      },
+      {
+        day: 3,
+        title: "Shira Camp",
+        description: "High altitude acclimatization",
+      },
+      { day: 4, title: "Barranco Camp", description: "Lava Tower and descent" },
+      { day: 5, title: "Karanga Camp", description: "Barranco Wall climb" },
+      { day: 6, title: "Summit Day", description: "Uhuru Peak and descent" },
+      {
+        day: 7,
+        title: "Mweka Gate",
+        description: "Complete descent and celebration",
+      },
+      { day: 8, title: "Serengeti Safari", description: "Game drives begin" },
+      { day: 9, title: "Ngorongoro Crater", description: "Crater exploration" },
+      { day: 10, title: "Departure", description: "Return to Arusha" },
+    ],
+    guide: {
+      name: "David Moyo",
+      license: "TZ-GUIDE-2022-9012",
+      experience: "15 years",
+      languages: ["English", "Swahili"],
+      rating: 5.0,
+      totalReviews: 76,
+      photo:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200",
+    },
+  },
+  {
+    id: "4",
+    title: "Gorilla Trekking Uganda",
+    location: "Uganda",
+    duration: "6 days",
+    price: 3800,
+    image:
+      "https://images.unsplash.com/photo-1542731890-f84615ca5ca6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnaXJhZmZlJTIwc2F2YW5uYXxlbnwxfHx8fDE3NjU2MjAxOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    groupSize: "4-6 people",
+    verified: true,
+    description:
+      "An unforgettable journey into the misty mountains of Bwindi to encounter mountain gorillas in their natural habitat. Limited permits make this an exclusive experience.",
+    highlights: [
+      "Mountain gorilla trekking",
+      "Bwindi Impenetrable Forest",
+      "Queen Elizabeth National Park safari",
+      "Chimpanzee tracking",
+      "Luxury eco-lodge accommodation",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Kampala to Bwindi",
+        description: "Scenic drive through Uganda",
+      },
+      {
+        day: 2,
+        title: "Gorilla Trekking",
+        description: "Full day gorilla encounter",
+      },
+      {
+        day: 3,
+        title: "Community Experience",
+        description: "Batwa cultural visit",
+      },
+      {
+        day: 4,
+        title: "Queen Elizabeth NP",
+        description: "Game drive and boat safari",
+      },
+      { day: 5, title: "Chimp Tracking", description: "Kyambura Gorge trek" },
+      {
+        day: 6,
+        title: "Return to Kampala",
+        description: "Transfer and departure",
+      },
+    ],
+    guide: {
+      name: "Grace Nakato",
+      license: "UG-GUIDE-2024-3456",
+      experience: "10 years",
+      languages: ["English", "Luganda"],
+      rating: 4.9,
+      totalReviews: 64,
+      photo:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200",
+    },
+  },
+  {
+    id: "5",
+    title: "Amboseli Elephant Safari",
+    location: "Kenya",
+    duration: "4 days",
+    price: 1800,
+    image:
+      "https://images.unsplash.com/photo-1741850820115-cc94b3bf8175?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVwaGFudHMlMjBzYXZhbm5hJTIwc3Vuc2V0fGVufDF8fHx8MTc2NTcyNDE4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    groupSize: "6-12 people",
+    verified: true,
+    description:
+      "Get up close with Africa's largest elephants against the stunning backdrop of Mount Kilimanjaro. Amboseli offers unparalleled elephant viewing and photography.",
+    highlights: [
+      "Large elephant herds",
+      "Mount Kilimanjaro views",
+      "Diverse birdlife",
+      "Observation Hill panoramas",
+      "Masai cultural interaction",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Nairobi to Amboseli",
+        description: "Afternoon game drive",
+      },
+      {
+        day: 2,
+        title: "Full Day Amboseli",
+        description: "Dawn to dusk wildlife viewing",
+      },
+      {
+        day: 3,
+        title: "Elephant Research",
+        description: "Visit research center and game drive",
+      },
+      {
+        day: 4,
+        title: "Return to Nairobi",
+        description: "Morning drive and transfer",
+      },
+    ],
+    guide: {
+      name: "Peter Ochieng",
+      license: "KE-GUIDE-2023-7890",
+      experience: "9 years",
+      languages: ["English", "Swahili"],
+      rating: 4.7,
+      totalReviews: 88,
+      photo:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200",
+    },
+  },
+  {
+    id: "6",
+    title: "Luxury Botswana Delta",
+    location: "Botswana",
+    duration: "8 days",
+    price: 5200,
+    image:
+      "https://images.unsplash.com/photo-1762603933471-ad5a57b5facf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWZhcmklMjB0ZW50JTIwY2FtcGluZ3xlbnwxfHx8fDE3NjU3MjQxODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    groupSize: "4-8 people",
+    verified: true,
+    description:
+      "Experience the pristine wilderness of the Okavango Delta in ultimate luxury. Mokoro canoe safaris, walking safaris, and exclusive lodge experiences.",
+    highlights: [
+      "Okavango Delta mokoro excursions",
+      "Walking safaris",
+      "Luxury tented camps",
+      "Night game drives",
+      "Exclusive concessions",
+    ],
+    itinerary: [
+      { day: 1, title: "Maun Arrival", description: "Light aircraft to delta" },
+      {
+        day: 2,
+        title: "Water Safari",
+        description: "Mokoro and boat excursions",
+      },
+      { day: 3, title: "Walking Safari", description: "Guided bush walk" },
+      {
+        day: 4,
+        title: "Game Drives",
+        description: "Land-based wildlife viewing",
+      },
+      { day: 5, title: "Moremi Reserve", description: "Predator tracking" },
+      { day: 6, title: "Night Drive", description: "Nocturnal wildlife" },
+      {
+        day: 7,
+        title: "Cultural Visit",
+        description: "Local community experience",
+      },
+      { day: 8, title: "Departure", description: "Return to Maun" },
+    ],
+    guide: {
+      name: "Thabo Molefe",
+      license: "BW-GUIDE-2021-2468",
+      experience: "14 years",
+      languages: ["English", "Setswana"],
+      rating: 5.0,
+      totalReviews: 52,
+      photo:
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200",
+    },
+  },
+];
+
+export const openGroups = [
+  {
+    id: "g1",
+    tourId: "1",
+    tourName: "Serengeti Migration Safari",
+    currentMembers: 8,
+    minRequired: 6,
+    maxSize: 12,
+    startDate: "Mar 15, 2025",
+    pricePerPerson: 2850,
+    daysLeft: 12,
+    members: [
+      {
+        name: "Alex Johnson",
+        avatar:
+          "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=100",
+      },
+      {
+        name: "Maria Garcia",
+        avatar:
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100",
+      },
+      {
+        name: "James Chen",
+        avatar:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100",
+      },
+    ],
+  },
+  {
+    id: "g2",
+    tourId: "2",
+    tourName: "Masai Mara Big Five Adventure",
+    currentMembers: 4,
+    minRequired: 6,
+    maxSize: 10,
+    startDate: "Apr 2, 2025",
+    pricePerPerson: 2200,
+    daysLeft: 25,
+    members: [
+      {
+        name: "Sophie Brown",
+        avatar:
+          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100",
+      },
+      {
+        name: "Michael Lee",
+        avatar:
+          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100",
+      },
+    ],
+  },
+  {
+    id: "g3",
+    tourId: "5",
+    tourName: "Amboseli Elephant Safari",
+    currentMembers: 9,
+    minRequired: 6,
+    maxSize: 12,
+    startDate: "Mar 28, 2025",
+    pricePerPerson: 1650,
+    daysLeft: 5,
+    members: [
+      {
+        name: "Emma Wilson",
+        avatar:
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100",
+      },
+      {
+        name: "David Kim",
+        avatar:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100",
+      },
+    ],
+  },
+];
