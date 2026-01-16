@@ -1,5 +1,6 @@
 import FeaturedTours from "@/components/landingpage/FeaturedTours";
 import Hero from "@/components/landingpage/Hero";
+import HowItWoks from "@/components/landingpage/HowItWoks";
 import WhyChoosePionusSafari from "@/components/landingpage/WhyChoosePionusSafari";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <WhyChoosePionusSafari />
       <FeaturedTours />
+      <HowItWoks />
     </>
   );
 }

@@ -17,6 +17,18 @@
   --color-merino-800: #6f4b3d;
   --color-merino-900: #5b3f33;
   --color-merino-950: #30201a;
+
+  --color-tahiti-gold-50: #fef7ec;
+  --color-tahiti-gold-100: #faeacb;
+  --color-tahiti-gold-200: #f5d192;
+  --color-tahiti-gold-300: #f0b559;
+  --color-tahiti-gold-400: #ec9c33;
+  --color-tahiti-gold-500: #e67e22;
+  --color-tahiti-gold-600: #cb5914;
+  --color-tahiti-gold-700: #a83e15;
+  --color-tahiti-gold-800: #893017;
+  --color-tahiti-gold-900: #712916;
+  --color-tahiti-gold-950: #411207;
 }
 
 body {
