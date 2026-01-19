@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "../common/Button";
+import Button from "../../common/Button";
 import TourCard from "../tour/TourCard";
 import { tours } from "@/data/data";
 

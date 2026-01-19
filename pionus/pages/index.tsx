@@ -1,8 +1,9 @@
-import FeaturedTours from "@/components/landingpage/FeaturedTours";
-import Hero from "@/components/landingpage/Hero";
-import HowItWoks from "@/components/landingpage/HowItWoks";
-import Testimonial from "@/components/landingpage/Testimonial";
-import WhyChoosePionusSafari from "@/components/landingpage/WhyChoosePionusSafari";
+import Cta from "@/components/ui/landingpage/Cta";
+import FeaturedTours from "@/components/ui/landingpage/FeaturedTours";
+import Hero from "@/components/ui/landingpage/Hero";
+import HowItWoks from "@/components/ui/landingpage/HowItWoks";
+import Testimonial from "@/components/ui/landingpage/Testimonial";
+import WhyChoosePionusSafari from "@/components/ui/landingpage/WhyChoosePionusSafari";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedTours />
       <HowItWoks />
       <Testimonial />
+      <Cta />
     </>
   );
 }

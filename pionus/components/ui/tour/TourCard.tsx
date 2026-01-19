@@ -1,8 +1,8 @@
 //import Image from "next/image";
-import AppImage from "../common/AppImage";
+import AppImage from "../../common/AppImage";
 import { TourCardProps } from "@/interfaces/TourCardProps";
 import { Calendar, MapPin, Users, Verified } from "lucide-react";
-import Button from "../common/Button";
+import Button from "../../common/Button";
 import Link from "next/link";
 
 function TourCard({
@@ -62,7 +62,12 @@ function TourCard({
             <p className="text-merino-950">${price}</p>
           </div>
         </div>
-        <Button variant="primary" size="sm" className="rounded-lg">
+        <Button
+          variant="primary"
+          size="sm"
+          aria-label="view tour"
+          className="rounded-lg"
+        >
           <Link href={`/tours/${id}`}>View Tour</Link>
         </Button>
       </div>
