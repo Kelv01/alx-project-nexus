@@ -1,5 +1,6 @@
-import Image from "next/image";
+//import Image from "next/image";
 import { testimonials } from "@/data/testimonial";
+import AppImage from "../common/AppImage";
 
 function Testimonial() {
   return (
@@ -22,9 +23,11 @@ function Testimonial() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="relative w-16 h-16 flex-shrink-0">
-                  <Image
+                  <AppImage
                     src={testimonial.image}
                     fill
+                    variant="avatar"
+                    loading="lazy"
                     alt={testimonial.name}
                     className="rounded-full object-cover"
                   />

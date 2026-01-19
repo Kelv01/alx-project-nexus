@@ -18,6 +18,7 @@ function FeaturedTours() {
           <Button
             size="md"
             variant="outline"
+            aria-label="view all tours"
             className="rounded-xl bg-merino-600 hover:bg-merino-700 text-white"
           >
             <Link href={"/tours/tours"}>View All Tours</Link>

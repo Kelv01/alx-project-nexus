@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+//import Image from "next/image";
+import AppImage from "../common/AppImage";
 import { TourCardProps } from "@/interfaces/TourCardProps";
 import { Calendar, MapPin, Users, Verified } from "lucide-react";
 import Button from "../common/Button";
@@ -18,11 +18,15 @@ function TourCard({
   return (
     <section className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="relative h-64 overflow-hidden">
-        <Image
+        <AppImage
           src={image}
           alt={title}
           fill
-          priority={false}
+          loading="lazy"
+          //   sizes="(max-width: 768px) 100vw,
+          //  (max-width: 1024px) 50vw,
+          //  33vw"
+          variant="card"
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
         {verified && (
