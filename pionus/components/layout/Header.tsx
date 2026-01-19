@@ -15,7 +15,7 @@ function Header() {
       <nav className="font-serif sticky top-0 z-50 bg-white flex justify-between items-center w-full py-6 px-8">
         {/* logo section */}
         <div className="flex items-center space-x-2">
-          <Bird className="text-[#A37152] h-8 w-8" />
+          <Bird className="text-merino-600 h-8 w-8" />
 
           <h1 className="text-black text-2xl font-poppins font-bold">
             <Link href="/">Pionus Safaris</Link>
@@ -32,8 +32,8 @@ function Header() {
                     href={link.href}
                     className={`${
                       router.pathname === link.href
-                        ? "text-[#A37152] font-bold"
-                        : "text-black hover:text-[#A37152]"
+                        ? "text-merino-600 font-bold"
+                        : "text-black hover:text-merino-600"
                     }`}
                   >
                     {link.name}
@@ -49,7 +49,7 @@ function Header() {
           {isSignedIn ? (
             <button
               onClick={() => setIsSignedIn(false)}
-              className="bg-red hover:bg-[#A37152] text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
+              className="bg-red hover:bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <User className="h-4 w-4" />
               <span>Sign Out</span>
@@ -57,7 +57,7 @@ function Header() {
           ) : (
             <Link
               href="/signin"
-              className="bg-[#A37152] hover:bg-[#A37152] text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
+              className="bg-merino-600 hover:bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <UserLock className="h-4 w-4" />
               <span>Sign In</span>
@@ -67,7 +67,7 @@ function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(true)}
-          className="ml-4 text-[#A37152] text-3xl md:hidden"
+          className="ml-4 text-merino-600 text-3xl md:hidden"
         >
           <Menu />
         </button>
@@ -107,7 +107,7 @@ function Header() {
           {isSignedIn ? (
             <button
               onClick={() => setIsSignedIn(false)}
-              className="bg-[#A37152] text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
+              className="bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <User className="h-4 w-4" />
               <span>Sign Out</span>
