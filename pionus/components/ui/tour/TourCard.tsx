@@ -31,7 +31,7 @@ function TourCard({
         />
         {verified && (
           <div className="absolute top-4 right-4">
-            <Verified className="text-green-600" />
+            <Verified className="text-tahiti-gold-600" />
           </div>
         )}
       </div>
@@ -62,14 +62,17 @@ function TourCard({
             <p className="text-merino-950">${price}</p>
           </div>
         </div>
-        <Button
-          variant="primary"
-          size="sm"
-          aria-label="view tour"
-          className="rounded-lg"
-        >
-          <Link href={`/tours/${id}`}>View Tour</Link>
-        </Button>
+        <Link href={`/tours/${id}`}>
+          {" "}
+          <Button
+            variant="primary"
+            size="sm"
+            aria-label="view tour"
+            className="rounded-lg"
+          >
+            View Tour
+          </Button>{" "}
+        </Link>
       </div>
     </section>
   );

@@ -1,7 +1,94 @@
-import React from 'react'
+import { tours, openGroups } from "../../data/tours";
+import { useState } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
+import TourHero from "@/components/ui/tour/TourHero";
+import TourTabs from "@/components/ui/tour/TourTabs";
+import TourSidebar from "@/components/ui/tour/TourSidebar";
 
-export default function [tourid]() {
+import { group } from "console";
+import { GroupCard } from "@/components/ui/tour/GroupCard";
+
+type Tour = (typeof tours)[number];
+type openGroup = (typeof openGroups)[number];
+
+type Props = {
+  tour: Tour;
+  tourGroups: openGroup[];
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: tours.map((tour) => ({
+      params: {
+        tourid: tour.id,
+      },
+    })),
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const tourid = params?.tourid as string;
+
+  const tour = tours.find((t) => t.id === tourid);
+
+  if (!tour) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const tourGroups = openGroups.filter((group) => group.tourId === tourid);
+
+  return {
+    props: {
+      tour,
+      tourGroups,
+    },
+  };
+};
+
+function ToursPage({ tour, tourGroups }: Props) {
+  const [activeTab, setActiveTab] = useState<
+    "overview" | "itinerary" | "guide" | "reviews"
+  >("overview");
+
   return (
-    <div>[tourid]</div>
-  )
+    <section className="min-h-screen bg-merino-50">
+      {/* Hero Image */}
+      <TourHero tour={tour} />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-2">
+            {/* Tabs */}
+            <TourTabs
+              tour={tour}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
+
+            {/* Open Groups */}
+            {tourGroups.length > 0 && (
+              <div className="bg-white rounded-xl shadow-md p-6">
+                <h3 className="mb-4 text-merino-950">
+                  Open Groups for This Tour
+                </h3>
+                <div className="space-y-4">
+                  {tourGroups.map((group) => (
+                    <GroupCard key={group.id} {...group} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Sidebar */}
+          <TourSidebar tour={tour} />
+        </div>
+      </div>
+    </section>
+  );
 }
+export default ToursPage;

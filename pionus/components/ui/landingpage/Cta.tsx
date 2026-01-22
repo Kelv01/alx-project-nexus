@@ -11,7 +11,7 @@ function Cta() {
         <p className="text-xl mb-8 text-merino-100">
           Join thousands of travelers discovering East Africa with Arch Safaris
         </p>
-        <Link href="/tours/tours">
+        <Link href="/tours">
           <Button
             variant="primary"
             size="lg"

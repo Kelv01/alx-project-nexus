@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Button from "../../common/Button";
 import TourCard from "../tour/TourCard";
-import { tours } from "@/data/data";
+import { tours } from "@/data/tours";
 
 function FeaturedTours() {
   const featuredTours = tours.slice(0, 3);
@@ -21,7 +21,7 @@ function FeaturedTours() {
             aria-label="view all tours"
             className="rounded-xl bg-merino-600 hover:bg-merino-700 text-white"
           >
-            <Link href={"/tours/tours"}>View All Tours</Link>
+            <Link href={"/tours"}>View All Tours</Link>
           </Button>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

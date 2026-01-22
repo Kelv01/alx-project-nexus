@@ -12,6 +12,7 @@ function AppImage({ variant = "card", ...props }: AppImageProps) {
     hero: "100vw",
     avatar: "64px",
   };
+
   return (
     <Image
       {...props}
