@@ -18,7 +18,7 @@ function ToursListingPage() {
 
         <div className="flex gap-8">
           {/* Filters */}
-          <div className="hidden lg:block w-80 flex-shrink-0">
+          <div className="hidden lg:block w-80 `flex-shrink-0`">
             <FilterSidebar />
           </div>
 
