@@ -59,9 +59,9 @@ function Groupspage() {
               </select>
             </div>
 
-            <div className="space-y-6">
+            <div className="py-20">
               <div className="flex items-center justify-center">
-                <p>
+                <p className="text-merino-700">
                   <span className="text-merino-900">
                     {openGroups.length} active groups
                   </span>{" "}
