@@ -41,7 +41,7 @@ function Team() {
                 <MapPin className="text-merino-500" size={48} />
               </div>
               <h5 className="mb-1 text-merino-950 font-bold">{member.name}</h5>
-              <p className="text-[#e67e22] mb-1">{member.role}</p>
+              <p className="text-tahiti-gold-500 mb-1">{member.role}</p>
               <p className="text-sm text-merino-600">{member.location}</p>
             </div>
           ))}

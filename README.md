@@ -6,14 +6,14 @@ A modern web platform for booking and managing safari tours in East Africa. Buil
 
 - **Tour Discovery**: Browse and filter available safari tours
 - **Group Management**: Create and manage tour groups with real-time member tracking
-- **Messaging System**: In-app messaging for communication between guides and travelers
+- **Messaging System**: Messaging UI foundation (extensible to real-time communication)
 - **Authentication**: Secure user registration and login
 - **Price Tracking**: Detailed price breakdown and split management
 - **Verified Guides**: Browse trusted and verified safari guides
 
 ## Tech Stack
 
-- [Next.js 14](https://nextjs.org) - React framework with App Router
+- [Next.js 14](https://nextjs.org) – Pages Router with SSR & SSG
 - [TypeScript](https://www.typescriptlang.org) - Type-safe JavaScript
 - [Tailwind CSS](https://tailwindcss.com) - Utility-first styling
 - [pnpm](https://pnpm.io) - Fast, disk space efficient package manager
@@ -151,7 +151,7 @@ pnpm start
 
 ### Web Development
 
-- **Next.js 14** - Modern React framework with App Router, Server-Side Rendering (SSR), and Static Generation (SSG)
+- **Next.js 14** - Modern React framework with Pages Router, Server-Side Rendering (SSR), and Static Generation (SSG)
 - **React** - Component-based UI library for building interactive interfaces
 - **TypeScript** - Static typing for safer, more maintainable JavaScript code
 - **Tailwind CSS** - Utility-first CSS framework for rapid UI development
@@ -176,6 +176,7 @@ pnpm start
 - **API Routes** - Backend endpoints using `/api` directory structure
 - **Image Optimization** - Efficient image delivery for tour galleries and guide profiles
 - **Code Splitting** - Automatic optimization for faster page loads
+- **Data-Fetching Strategy** - Static generation is used where possible (landing pages, tour listings), while server-side rendering is applied for dynamic and authenticated pages
 
 ### TypeScript Implementation
 
@@ -201,7 +202,8 @@ pnpm start
 
 - **Data Fetching** - Integration with backend APIs for tours, groups, and user data
 - **Messaging System** - Real-time chat functionality between guides and travelers
-- **Authentication** - Secure login and registration workflows
+- **Authentication** - Authentication pages are implemented with form validation and designed to integrate with server-side session-based authentication
+- **Admin Dashboard** - An admin dashboard (planned) will manage guide verification, tour approvals, and group moderation
 - **Dynamic Content** - Fetching and rendering tour information, prices, and availability
 
 ## Challenges Faced & Solutions Implemented
@@ -271,49 +273,51 @@ pnpm start
 - Implemented nested routing for feature-specific pages
 - Used TypeScript for route safety
 
+**Trade-offs**: Context API was avoided in early stages to reduce complexity, with potential migration planned as state sharing grows
+
 ## Best Practices & Personal Takeaways
 
 ### Code Organization & Architecture
 
-- ✅ **Component Modularization** - Each component handles a single responsibility, making code maintainable and testable
-- ✅ **Interface-Based Development** - Defining clear contracts through TypeScript interfaces prevents bugs and improves documentation
-- ✅ **DRY Principle** - Reusable components in `/common` folder eliminate code duplication
-- ✅ **Feature-Based Organization** - Grouping related components by feature (group, tour, messaging) improves project navigation
+- **Component Modularization** - Each component handles a single responsibility, making code maintainable and testable
+- **Interface-Based Development** - Defining clear contracts through TypeScript interfaces prevents bugs and improves documentation
+- **DRY Principle** - Reusable components in `/common` folder eliminate code duplication
+- **Feature-Based Organization** - Grouping related components by feature (group, tour, messaging) improves project navigation
 
 ### Frontend Development Patterns
 
-- ✅ **Props Drilling vs. Context** - Understanding when to use props vs. context API for state management
-- ✅ **Controlled Components** - Using React state to manage form inputs for predictable behavior
-- ✅ **Component Composition** - Building complex UIs by combining simple, single-purpose components
-- ✅ **Separation of Concerns** - Keeping UI logic, styling, and data fetching separate
+- **Props Drilling vs. Context** - Understanding when to use props vs. context API for state management
+- **Controlled Components** - Using React state to manage form inputs for predictable behavior
+- **Component Composition** - Building complex UIs by combining simple, single-purpose components
+- **Separation of Concerns** - Keeping UI logic, styling, and data fetching separate
 
 ### TypeScript Best Practices
 
-- ✅ **Strong Typing** - Always define explicit types for props, state, and function parameters
-- ✅ **Interface Over Implementation** - Use interfaces for contracts and types for unions/primitives
-- ✅ **Avoiding `any`** - Strict typing prevents silent errors and improves IDE support
-- ✅ **Generic Types** - Using generics for flexible, reusable component patterns
+- **Strong Typing** - Always define explicit types for props, state, and function parameters
+- **Interface Over Implementation** - Use interfaces for contracts and types for unions/primitives
+- **Avoiding `any`** - Strict typing prevents silent errors and improves IDE support
+- **Generic Types** - Using generics for flexible, reusable component patterns
 
 ### Styling & UI/UX
 
-- ✅ **Utility-First CSS** - Tailwind's utility classes provide consistency without writing custom CSS
-- ✅ **Design System** - Creating Badge, Button, and Input components ensures visual consistency
-- ✅ **Responsive-First Design** - Building mobile experience first, then scaling up improves accessibility
-- ✅ **Component-Scoped Styles** - Keeping styles close to components improves maintainability
+- **Utility-First CSS** - Tailwind's utility classes provide consistency without writing custom CSS
+- **Design System** - Creating Badge, Button, and Input components ensures visual consistency
+- **Responsive-First Design** - Building mobile experience first, then scaling up improves accessibility
+- **Component-Scoped Styles** - Keeping styles close to components improves maintainability
 
 ### Performance Optimization
 
-- ✅ **Image Optimization** - Using Next.js Image component for automatic lazy loading and format conversion
-- ✅ **Code Splitting** - Next.js automatically splits code per route for faster initial loads
-- ✅ **Asset Organization** - Properly organizing public files improves build performance
-- ✅ **CSS Optimization** - PostCSS and Tailwind purge unused styles automatically
+- **Image Optimization** - Using Next.js Image component for automatic lazy loading and format conversion
+- **Code Splitting** - Next.js automatically splits code per route for faster initial loads
+- **Asset Organization** - Properly organizing public files improves build performance
+- **CSS Optimization** - PostCSS and Tailwind purge unused styles automatically
 
 ### Development Workflow
 
-- ✅ **Type-First Development** - Defining interfaces before implementation prevents design issues
-- ✅ **Consistent Naming** - Using descriptive, consistent naming conventions improves code readability
-- ✅ **Hot Reload During Development** - Leveraging pnpm dev for instant feedback while building
-- ✅ **ESLint Configuration** - Maintaining code quality standards across the team
+- **Type-First Development** - Defining interfaces before implementation prevents design issues
+- **Consistent Naming** - Using descriptive, consistent naming conventions improves code readability
+- **Hot Reload During Development** - Leveraging pnpm dev for instant feedback while building
+- **ESLint Configuration** - Maintaining code quality standards across the team
 
 ### Key Learnings
 
