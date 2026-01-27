@@ -15,11 +15,13 @@ function Header() {
       <nav className="font-serif sticky top-0 z-50 bg-white flex justify-between items-center w-full py-6 px-8">
         {/* logo section */}
         <div className="flex items-center space-x-2">
-          <Bird className="text-merino-600 h-8 w-8" />
-
-          <h1 className="text-black text-2xl font-poppins font-bold">
-            <Link href="/">Pionus Safaris</Link>
-          </h1>
+          <Link href="/" className="inline-flex items-center gap-2  ">
+            {" "}
+            <Bird className="text-merino-600 h-8 w-8" />
+            <h1 className="text-black text-2xl font-poppins font-bold">
+              Pionus Safaris
+            </h1>
+          </Link>
         </div>
 
         {/* desktop navigation */}
@@ -56,7 +58,7 @@ function Header() {
             </button>
           ) : (
             <Link
-              href="/signin"
+              href="/auth/login"
               className="bg-merino-600 hover:bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <UserLock className="h-4 w-4" />
