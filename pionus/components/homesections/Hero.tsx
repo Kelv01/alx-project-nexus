@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import background from "../../../public/sutirta.webp";
-import Button from "../../common/Button";
+import background from "../../public/sutirta.webp";
+import Button from "../common/Button";
 import { Search, Users } from "lucide-react";
 import AppImage from "@/components/common/AppImage";
 

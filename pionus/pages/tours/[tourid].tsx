@@ -1,12 +1,11 @@
 import { tours, openGroups } from "../../data/tours";
 import { useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import TourHero from "@/components/ui/tour/TourHero";
-import TourTabs from "@/components/ui/tour/TourTabs";
-import TourSidebar from "@/components/ui/tour/TourSidebar";
+import TourHero from "@/pages/tours/components/TourHero";
+import TourTabs from "@/pages/tours/components/TourTabs";
+import TourSidebar from "@/pages/tours/components/TourSidebar";
 
-import { group } from "console";
-import { GroupCard } from "@/components/ui/tour/GroupCard";
+import { GroupCard } from "./components/TourGroupCard";
 
 type Tour = (typeof tours)[number];
 type openGroup = (typeof openGroups)[number];

@@ -36,24 +36,6 @@ function login() {
 
           <div className="bg-white rounded-xl shadow-lg p-8 ">
             <form className="space-y-5">
-              {/* {!isLogin && (
-                <div>
-                  <label className=" block mb-2 text-sm text-merino-800 ">
-                    Full Name
-                  </label>
-                  <div className="relative">
-                    <User
-                      className="absolute left-3 top-1/2 -translate-y-1/2 text-merino-600"
-                      size={18}
-                    />
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="w-full pl-10 pr-4 py-3 border border-merino-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-              )} */}
               {!isLogin && (
                 <div>
                   <label className="block mb-2 text-sm text-merino-800">
@@ -185,16 +167,7 @@ function login() {
                 </Button>
               </p>
             </div>
-            {/* <div className="mt-6 relative ">
-              <div className="absolute inset-0 flex items-center ">
-                <div className="w-full border-t border-merino-200"></div>
-              </div>
-              <div className="relative justify-center text-sm">
-                <span className="px-4 bg-white text-merino-600 ">
-                  Or continue with
-                </span>
-              </div>
-            </div> */}
+
             <div className="mt-6 relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-merino-200"></div>

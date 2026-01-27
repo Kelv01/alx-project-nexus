@@ -1,8 +1,8 @@
 //import Image from "next/image";
-import AppImage from "../../common/AppImage";
+import AppImage from "../../../components/common/AppImage";
 import { TourCardProps } from "@/interfaces/TourCardProps";
 import { Calendar, MapPin, Users, Verified } from "lucide-react";
-import Button from "../../common/Button";
+import Button from "../../../components/common/Button";
 import Link from "next/link";
 
 function TourCard({

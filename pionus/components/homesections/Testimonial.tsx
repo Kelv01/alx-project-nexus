@@ -1,6 +1,6 @@
 //import Image from "next/image";
 import { testimonials } from "@/data/testimonial";
-import AppImage from "../../common/AppImage";
+import AppImage from "../common/AppImage";
 
 function Testimonial() {
   return (

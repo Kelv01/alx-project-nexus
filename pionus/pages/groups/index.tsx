@@ -1,17 +1,17 @@
 import { Search } from "lucide-react";
 import { openGroups } from "../../data/tours";
-import GroupCard from "@/components/ui/group/GroupCard";
+import GroupCard from "@/pages/groups/components/GroupCard";
 
 function Groupspage() {
   return (
     <section>
       <div className="min-h-screen bg-merino-50 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <h1 className="mb-2 text-merino-950 text-2xl">
+            <h1 className="mb-2 text-merino-950 text-2xl font-bold">
               Open safari Groups
             </h1>
-            <p>
+            <p className="text-merino-700">
               Join fellow travelers and split costs for your safari adventure
             </p>
           </div>
@@ -23,14 +23,14 @@ function Groupspage() {
                 <input
                   type="text"
                   placeholder="search by tour name or location"
-                  className="w-full pl-10 pr-10 py-3 border border-merino-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-merino-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold-500 focus:border-transparent"
                 />
               </div>
 
               <select
                 name=""
                 id=""
-                className="w-full pl-10 pr-10 py-3 border border-merino-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold-500 focus:border-transparent"
+                className="px-4 py-3 border border-merino-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold-500 focus:border-transparent text-merino-700transparent"
               >
                 <option
                   value="
@@ -49,7 +49,7 @@ function Groupspage() {
               <select
                 name=""
                 id=""
-                className="w-full pl-10 pr-10 py-3 border border-merino-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold-500 focus:border-transparent"
+                className="px-4 py-3 border border-merino-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-tahiti-gold-500 focus:border-transparent text-merino-700"
               >
                 <option value="newest">Sort by: Newest</option>
                 <option value="price-asc">Price: Low to High</option>
@@ -59,20 +59,20 @@ function Groupspage() {
               </select>
             </div>
 
-            <div className="py-20">
-              <div className="flex items-center justify-center">
-                <p className="text-merino-700">
+            <div className="space-y-6">
+              <div className="flex items-center justify-between">
+                <p className="text-merino-700 mt-4">
                   <span className="text-merino-900">
                     {openGroups.length} active groups
                   </span>{" "}
                   looking for members
                 </p>
+              </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  {openGroups.map((group) => (
-                    <GroupCard key={group.id} {...group} />
-                  ))}
-                </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {openGroups.map((group) => (
+                  <GroupCard key={group.id} {...group} />
+                ))}
               </div>
             </div>
 

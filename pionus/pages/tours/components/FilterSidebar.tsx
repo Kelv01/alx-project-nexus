@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SlidersHorizontal } from "lucide-react";
-import Button from "../../common/Button";
+import Button from "../../../components/common/Button";
 
 export function FilterSidebar() {
   const [selectedLocation, setSelectedLocation] = useState<string[]>([]);

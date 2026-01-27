@@ -1,10 +1,10 @@
 import Button from "@/components/common/Button";
 import Cta from "@/components/common/Cta";
-import FeaturedTours from "@/components/ui/landingpage/FeaturedTours";
-import Hero from "@/components/ui/landingpage/Hero";
-import HowItWoks from "@/components/ui/landingpage/HowItWoks";
-import Testimonial from "@/components/ui/landingpage/Testimonial";
-import WhyChoosePionusSafari from "@/components/ui/landingpage/WhyChoosePionusSafari";
+import FeaturedTours from "@/components/homesections/FeaturedTours";
+import Hero from "@/components/homesections/Hero";
+import HowItWoks from "@/components/homesections/HowItWoks";
+import Testimonial from "@/components/homesections/Testimonial";
+import WhyChoosePionusSafari from "@/components/homesections/WhyChoosePionusSafari";
 import Link from "next/link";
 import React from "react";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import TourCard from "../../components/ui/tour/TourCard";
-import { FilterSidebar } from "../../components/ui/tour/FilterSidebar";
+import TourCard from "./components/TourCard";
+import { FilterSidebar } from "./components/FilterSidebar";
 import { tours } from "../../data/tours";
 
 function ToursListingPage() {

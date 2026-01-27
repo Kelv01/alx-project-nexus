@@ -1,26 +1,15 @@
 import AppImage from "@/components/common/AppImage";
 import background from "../../public/about/nightforest.jpeg";
-
-import moutain from "../../public/about/chimountain.jpeg";
-import {
-  Award,
-  Globe,
-  Leaf,
-  MapPin,
-  ShieldCheck,
-  Target,
-  Users,
-} from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/common/Button";
-import OurStory from "@/components/ui/about/OurStory";
-import Mission from "@/components/ui/about/Mission";
-import Corevalues from "@/components/ui/about/Corevalues";
-import WhatsetsUsApart from "@/components/ui/about/WhatsetsUsApart";
-import ImpactStats from "@/components/ui/about/ImpactStats";
-import Team from "@/components/ui/about/Team";
+import OurStory from "@/pages/about/components/OurStory";
+import Mission from "@/pages/about/components/Mission";
+import Corevalues from "@/pages/about/components/Corevalues";
+import WhatsetsUsApart from "@/pages/about/components/WhatsetsUsApart";
+import ImpactStats from "@/pages/about/components/ImpactStats";
+import Team from "@/pages/about/components/Team";
 import Cta from "@/components/common/Cta";
-import Conservation from "@/components/ui/about/Conservation";
+import Conservation from "@/pages/about/components/Conservation";
 
 function AboutPage() {
   return (

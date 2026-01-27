@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Button from "../../common/Button";
-import TourCard from "../tour/TourCard";
+import Button from "../common/Button";
+import TourCard from "../../pages/tours/components/TourCard";
 import { tours } from "@/data/tours";
 
 function FeaturedTours() {

@@ -1,5 +1,5 @@
 import { Users, Calendar, DollarSign } from "lucide-react";
-import Button from "../../common/Button";
+import Button from "../../../components/common/Button";
 
 import { GroupCardProps } from "@/interfaces/GroupCard";
 

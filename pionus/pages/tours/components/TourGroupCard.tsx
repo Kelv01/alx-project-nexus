@@ -1,6 +1,6 @@
 import React from "react";
 import { Users, Calendar, DollarSign } from "lucide-react";
-import Button from "../../common/Button";
+import Button from "../../../components/common/Button";
 
 interface GroupCardProps {
   id: string;
