@@ -12,7 +12,7 @@ function Hero() {
         <div className="absolute inset-0 bg-linear-to-r from-merino-950/80 to-merino-900/60" />
       </div>
       <div className="relative z-10 inset-0 max-w-4xl mx-auto px-4 text-center text-white">
-        <h1 className="mb-6 font-bold text-5xl">
+        <h1 className="mb-6 font-bold text-6xl">
           Experience the wild, together
         </h1>
         <p className="text-xl mb-8 text-merino-100">

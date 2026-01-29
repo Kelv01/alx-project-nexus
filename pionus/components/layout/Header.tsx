@@ -45,6 +45,12 @@ function Header() {
             </ul>
           </div>
         </div>
+        {/* 
+        <div className="flex items-center justify-center p-4">
+          <Button variant="outline" size="md" className="rounded-lg">
+            <MessageCircle /> Message
+          </Button>
+        </div> */}
 
         {/* Login/Logout Buttons */}
         <div className="hidden md:block">
@@ -116,7 +122,7 @@ function Header() {
             </button>
           ) : (
             <Link
-              href="/signin"
+              href="/auth/login"
               className="bg-400 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <UserLock className="h-4 w-4" />

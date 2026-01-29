@@ -14,10 +14,7 @@ function login() {
       <div className="flex-1 flex items-center justify-center p-8 ">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
-            <Link
-              href="/auth/login"
-              className="inline-flex items-center gap-2 mb-6 "
-            >
+            <Link href="/" className="inline-flex items-center gap-2 mb-6 ">
               <Bird className="text-merino-600 h-8 w-8" />
               <h1 className="text-black text-2xl font-poppins font-bold">
                 Pionus Safaris
@@ -236,5 +233,8 @@ function login() {
     </section>
   );
 }
+login.getLayout = function getLayout(page: React.ReactElement) {
+  return page;
+};
 
 export default login;

@@ -17,12 +17,12 @@ function ToursListingPage() {
         </div>
 
         <div className="flex gap-8">
-          {/* Filters */}
+          {/* tour filters */}
           <div className="hidden lg:block w-80 `flex-shrink-0`">
             <FilterSidebar />
           </div>
 
-          {/* Tours Grid */}
+          {/* grid tours*/}
           <div className="flex-1">
             <div className="flex items-center justify-between mb-6">
               <p className="text-merino-700">
