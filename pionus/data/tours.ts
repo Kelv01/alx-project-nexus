@@ -49,8 +49,7 @@ export const tours = [
       languages: ["English", "Swahili", "German"],
       rating: 4.9,
       totalReviews: 142,
-      photo:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
+      photo: "/guides/masaimale.jpg",
     },
   },
   {
@@ -105,8 +104,7 @@ export const tours = [
       languages: ["English", "Swahili", "French"],
       rating: 4.8,
       totalReviews: 98,
-      photo:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200",
+      photo: "/guides/joecalih.jpg",
     },
   },
   {
@@ -162,8 +160,7 @@ export const tours = [
       languages: ["English", "Swahili"],
       rating: 5.0,
       totalReviews: 76,
-      photo:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200",
+      photo: "/guides/masaimale.jpg",
     },
   },
   {
@@ -220,8 +217,7 @@ export const tours = [
       languages: ["English", "Luganda"],
       rating: 4.9,
       totalReviews: 64,
-      photo:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200",
+      photo: "/guides/hassan.jpg",
     },
   },
   {
@@ -230,8 +226,7 @@ export const tours = [
     location: "Kenya",
     duration: "4 days",
     price: 1800,
-    image:
-      "https://images.unsplash.com/photo-1741850820115-cc94b3bf8175?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVwaGFudHMlMjBzYXZhbm5hJTIwc3Vuc2V0fGVufDF8fHx8MTc2NTcyNDE4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/tours/amboseliEphants.jpg",
     groupSize: "6-12 people",
     verified: true,
     description:
@@ -272,8 +267,7 @@ export const tours = [
       languages: ["English", "Swahili"],
       rating: 4.7,
       totalReviews: 88,
-      photo:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200",
+      photo: "/guides/brian.jpg",
     },
   },
   {
@@ -282,8 +276,7 @@ export const tours = [
     location: "Botswana",
     duration: "8 days",
     price: 5200,
-    image:
-      "https://images.unsplash.com/photo-1762603933471-ad5a57b5facf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWZhcmklMjB0ZW50JTIwY2FtcGluZ3xlbnwxfHx8fDE3NjU3MjQxODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: "/tours/sahara.jpeg",
     groupSize: "4-8 people",
     verified: true,
     description:
@@ -324,8 +317,7 @@ export const tours = [
       languages: ["English", "Setswana"],
       rating: 5.0,
       totalReviews: 52,
-      photo:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200",
+      photo: "/guides/setswana.jpg",
     },
   },
 ];
@@ -344,18 +336,15 @@ export const openGroups = [
     members: [
       {
         name: "Alex Johnson",
-        avatar:
-          "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=100",
+        avatar: "/testimonials/man.jpeg",
       },
       {
         name: "Maria Garcia",
-        avatar:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100",
+        avatar: "/testimonials/woman.jpeg",
       },
       {
         name: "James Chen",
-        avatar:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100",
+        avatar: "/testimonials/man2.jpeg",
       },
     ],
   },

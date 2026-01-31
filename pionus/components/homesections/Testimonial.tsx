@@ -25,11 +25,10 @@ function Testimonial() {
                 <div className="relative w-16 h-16 flex-shrink-0">
                   <AppImage
                     src={testimonial.image}
-                    fill
                     variant="avatar"
                     loading="lazy"
                     alt={testimonial.name}
-                    className="rounded-full object-cover"
+                    className="w-12 h-12 rounded-full object-cover"
                   />
                 </div>
                 <div>

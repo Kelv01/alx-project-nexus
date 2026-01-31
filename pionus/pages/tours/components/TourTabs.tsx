@@ -100,8 +100,6 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
                 src={tour.guide.photo}
                 alt={tour.guide.name}
                 variant="avatar"
-                height={48}
-                width={48}
                 className="w-32 h-32 rounded-full object-cover"
               />
               <div className="flex-1">
@@ -179,8 +177,6 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
                       src={review.avatar}
                       alt={review.name}
                       variant="avatar"
-                      height={48}
-                      width={48}
                       className="w-12 h-12 rounded-full object-cover"
                     />
                     <div className="flex-1">

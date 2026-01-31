@@ -21,8 +21,8 @@ function TourCard({
         <AppImage
           src={image}
           alt={title}
-          fill
           loading="lazy"
+          fill
           //   sizes="(max-width: 768px) 100vw,
           //  (max-width: 1024px) 50vw,
           //  33vw"

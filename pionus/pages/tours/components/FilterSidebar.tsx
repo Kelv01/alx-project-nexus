@@ -2,30 +2,52 @@ import React, { useState } from "react";
 import { SlidersHorizontal } from "lucide-react";
 import Button from "../../../components/common/Button";
 
-export function FilterSidebar() {
-  const [selectedLocation, setSelectedLocation] = useState<string[]>([]);
-  const [priceRange, setPriceRange] = useState([0, 10000]);
-  const [duration, setDuration] = useState<string[]>([]);
+type Props = {
+  selectedLocation: string[];
+  onLocationChange: (locations: string[]) => void;
+  duration: string[];
+  onDurationChange: (durations: string[]) => void;
+  priceRange: [number, number];
+  onPriceChange: (range: [number, number]) => void;
+};
 
+export function FilterSidebar({
+  selectedLocation,
+  onLocationChange,
+  duration,
+  onDurationChange,
+  priceRange,
+  onPriceChange,
+}: Props) {
   const locations = ["Kenya", "Tanzania", "Uganda", "Rwanda", "Botswana"];
-  const durations = ["3-5 days", "6-8 days", "9-12 days", "13+ days"];
+  const durations = ["3-7 days", "7-9 days", "10-13 days", "14+ days"];
 
   const toggleLocation = (loc: string) => {
-    setSelectedLocation((prev) =>
-      prev.includes(loc) ? prev.filter((l) => l !== loc) : [...prev, loc],
+    onLocationChange(
+      selectedLocation.includes(loc)
+        ? selectedLocation.filter((l) => l !== loc)
+        : [...selectedLocation, loc],
     );
   };
 
   const toggleDuration = (dur: string) => {
-    setDuration((prev) =>
-      prev.includes(dur) ? prev.filter((d) => d !== dur) : [...prev, dur],
+    onDurationChange(
+      duration.includes(dur)
+        ? duration.filter((d) => d !== dur)
+        : [...duration, dur],
     );
+  };
+
+  const clearAll = () => {
+    onLocationChange([]);
+    onDurationChange([]);
+    onPriceChange([0, 10000]);
   };
 
   return (
     <div className="bg-white rounded-xl p-6 shadow-md sticky top-24">
       <div className="flex items-center gap-2 mb-6">
-        <SlidersHorizontal size={20} className="text-merino-700" />
+        <SlidersHorizontal className="text-merino-700" />
         <h3 className="text-merino-950">Filters</h3>
       </div>
 
@@ -59,7 +81,7 @@ export function FilterSidebar() {
               max="10000"
               step="500"
               value={priceRange[1]}
-              onChange={(e) => setPriceRange([0, parseInt(e.target.value)])}
+              onChange={(e) => onPriceChange([0, parseInt(e.target.value)])}
               className="w-full accent-tahiti-gold-500"
             />
             <div className="flex justify-between text-sm text-merino-600">
@@ -90,10 +112,20 @@ export function FilterSidebar() {
         </div>
 
         <div className="pt-4 border-t border-merino-200 space-y-2">
-          <Button variant="primary" size="sm" className="w-full">
+          <Button
+            variant="primary"
+            size="sm"
+            className="w-full"
+            onClick={() => {}}
+          >
             Apply Filters
           </Button>
-          <Button variant="outline" size="sm" className="w-full">
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-full"
+            onClick={clearAll}
+          >
             Clear All
           </Button>
         </div>

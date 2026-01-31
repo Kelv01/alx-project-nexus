@@ -1,21 +1,28 @@
-import { tours, openGroups } from "../../data/tours";
+//import { tours, openGroups } from "../../data/tours";
 import { useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import TourHero from "@/pages/tours/components/TourHero";
 import TourTabs from "@/pages/tours/components/TourTabs";
 import TourSidebar from "@/pages/tours/components/TourSidebar";
-
 import { GroupCard } from "./components/TourGroupCard";
 
-type Tour = (typeof tours)[number];
-type openGroup = (typeof openGroups)[number];
+import {
+  getAllTours,
+  getTourById,
+  getOpenGroupsByTourId,
+} from "@/lib/api/tours";
+
+type Tour = Awaited<ReturnType<typeof getTourById>>;
+type openGroup = Awaited<ReturnType<typeof getOpenGroupsByTourId>>[number];
 
 type Props = {
-  tour: Tour;
+  tour: NonNullable<Tour>;
   tourGroups: openGroup[];
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const tours = await getAllTours();
+
   return {
     paths: tours.map((tour) => ({
       params: {
@@ -29,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const tourid = params?.tourid as string;
 
-  const tour = tours.find((t) => t.id === tourid);
+  const tour = await getTourById(tourid);
 
   if (!tour) {
     return {
@@ -37,13 +44,14 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     };
   }
 
-  const tourGroups = openGroups.filter((group) => group.tourId === tourid);
+  const tourGroups = await getOpenGroupsByTourId(tourid);
 
   return {
     props: {
       tour,
       tourGroups,
     },
+    revalidate: 60,
   };
 };
 

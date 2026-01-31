@@ -1,7 +1,5 @@
 import Button from "@/components/common/Button";
 import Link from "next/link";
-import { tours } from "@/data/tours";
-import React from "react";
 
 function TourSidebar({ tour }: { tour: any }) {
   return (
