@@ -150,7 +150,7 @@ pnpm start
 
 ### Web Development
 
-- **Next.js 14** - Modern React framework with Pages Router, Server-Side Rendering (SSR), and Static Generation (SSG)
+- **Next.js 16** - Modern React framework with Pages Router, Server-Side Rendering (SSR), and Static Generation (SSG)
 - **React** - Component-based UI library for building interactive interfaces
 - **TypeScript** - Static typing for safer, more maintainable JavaScript code
 - **Tailwind CSS** - Utility-first CSS framework for rapid UI development
