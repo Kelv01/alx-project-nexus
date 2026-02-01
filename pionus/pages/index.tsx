@@ -6,7 +6,6 @@ import HowItWoks from "@/components/homesections/HowItWoks";
 import Testimonial from "@/components/homesections/Testimonial";
 import WhyChoosePionusSafari from "@/components/homesections/WhyChoosePionusSafari";
 import Link from "next/link";
-import React from "react";
 
 export default function Home() {
   return (

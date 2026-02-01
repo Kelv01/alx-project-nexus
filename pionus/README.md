@@ -25,44 +25,18 @@ pionus/
 ├── components/
 │   ├── common/
 │   │   ├── AppImage.tsx
-│   │   ├── Badge.tsx
 │   │   ├── Button.tsx
-│   │   ├── Cta.tsx
-│   │   └── Input.tsx
+│   │   └── Cta.tsx
+│   ├── homesections/
+│   │   ├── FeaturedTours.tsx
+│   │   ├── Hero.tsx
+│   │   ├── HowItWoks.tsx
+│   │   ├── Testimonial.tsx
+│   │   └── WhyChoosePionusSafari.tsx
 │   ├── layout/
 │   │   ├── Footer.tsx
 │   │   ├── Header.tsx
 │   │   └── Layout.tsx
-│   ├── ui/
-│   │   ├── about/
-│   │   │   ├── Conservation.tsx
-│   │   │   ├── Corevalues.tsx
-│   │   │   ├── ImpactStats.tsx
-│   │   │   ├── Mission.tsx
-│   │   │   ├── OurStory.tsx
-│   │   │   ├── Team.tsx
-│   │   │   └── WhatsetsUsApart.tsx
-│   │   ├── group/
-│   │   │   ├── GroupCard.tsx
-│   │   │   ├── GroupMembersPreview.tsx
-│   │   │   └── PriceSplitBar.tsx
-│   │   ├── landingpage/
-│   │   │   ├── FeaturedTours.tsx
-│   │   │   ├── Hero.tsx
-│   │   │   ├── HowItWoks.tsx
-│   │   │   ├── Testimonial.tsx
-│   │   │   └── WhyChoosePionusSafari.tsx
-│   │   ├── messaging/
-│   │   │   ├── ChatWindow.tsx
-│   │   │   ├── MessageBubble.tsx
-│   │   │   └── ThreadList.tsx
-│   │   └── tour/
-│   │       ├── FilterSidebar.tsx
-│   │       ├── GroupCard.tsx
-│   │       ├── TourCard.tsx
-│   │       ├── TourHero.tsx
-│   │       ├── TourSidebar.tsx
-│   │       └── TourTabs.tsx
 ├── constants/
 │   └── nav_links.ts
 ├── data/
@@ -73,12 +47,23 @@ pionus/
 │   ├── GroupCard.ts
 │   ├── Testimonial.ts
 │   └── TourCardProps.ts
+├── lib/
+│   └── api/
+│       └── tours.ts
 ├── pages/
 │   ├── _app.tsx
 │   ├── _document.tsx
 │   ├── index.tsx
 │   ├── about/
-│   │   └── index.tsx
+│   │   ├── index.tsx
+│   │   └── components/
+│   │       ├── Conservation.tsx
+│   │       ├── Corevalues.tsx
+│   │       ├── ImpactStats.tsx
+│   │       ├── Mission.tsx
+│   │       ├── OurStory.tsx
+│   │       ├── Team.tsx
+│   │       └── WhatsetsUsApart.tsx
 │   ├── api/
 │   │   └── hello.ts
 │   ├── auth/
@@ -87,12 +72,24 @@ pionus/
 │   ├── contact/
 │   │   └── contact.tsx
 │   ├── groups/
-│   │   └── index.tsx
+│   │   ├── index.tsx
+│   │   └── components/
+│   │       └── GroupCard.tsx
+│   ├── legal/
+│   │   ├── privacy.tsx
+│   │   └── terms.tsx
 │   ├── messages/
 │   │   └── message.tsx
-│   └── tours/
-│       ├── [tourid].tsx
-│       └── index.tsx
+│   ├── tours/
+│   │   ├── [tourid].tsx
+│   │   ├── index.tsx
+│   │   └── components/
+│   │       ├── FilterSidebar.tsx
+│   │       ├── TourCard.tsx
+│   │       ├── TourGroupCard.tsx
+│   │       ├── TourHero.tsx
+│   │       ├── TourSidebar.tsx
+│   │       └── TourTabs.tsx
 ├── public/
 │   ├── about/
 │   ├── guides/
@@ -327,6 +324,17 @@ pnpm start
 4. **Tailwind Accelerates Development** - Utility-first approach is faster than traditional CSS writing
 5. **Data Flow Clarity** - Clear, unidirectional data flow (props down, events up) prevents state bugs
 6. **Testing Early** - Catching issues during development is far more efficient than post-launch fixes
+
+## Known Issues ⚠️
+
+- **Messaging**: The messaging UI foundation exists but is not currently accessible to end users. It requires backend integration and will be enabled once the real backend is live; messages will be available after user signup/authentication.
+- **Access Control**: Some features are gated until backend-auth is implemented.
+
+## Roadmap / What to build next ✅
+
+- **Real Backend API**: Implement a full backend for tours, groups, messaging, and authentication. This will replace local/mock data and make messaging and other authenticated features live after sign up.
+- **Admin Dashboard**: Build an admin interface to manage guide verification, tour approvals, group moderation, and message moderation.
+- **Messaging Integration**: Connect the existing messaging UI to a real-time backend (WebSocket/Pusher/realtime DB) once the API is available.
 
 ## Contributing
 
