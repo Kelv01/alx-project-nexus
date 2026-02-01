@@ -11,7 +11,7 @@ function login() {
 
   return (
     <div className="min-h-screen bg-merino-50 flex">
-      {/* left column */}
+      {/* lft column */}
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
@@ -189,7 +189,7 @@ function login() {
         </div>
       </div>
 
-      {/* right column*/}
+      {/* right column with image*/}
       <div className="hidden lg:block lg:w-1/2 relative">
         <div className="absolute inset-0 bg-cover bg-center">
           <AppImage

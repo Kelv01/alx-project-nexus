@@ -30,9 +30,11 @@ function Corevalues() {
 
           <div className="text-center">
             <div className="w-20 h-20 bg-merino-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Users className="text-[#e67e22]" size={36} />
+              <Users className="text-tahiti-gold-500" size={36} />
             </div>
-            <h4 className="mb-3 text-merino-950">Community</h4>
+            <h4 className="mb-3 text-merino-950 font-bold text-2xl">
+              Community
+            </h4>
             <p className="text-merino-700">
               Building connections between travelers and supporting local
               communities through tourism

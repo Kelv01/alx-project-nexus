@@ -23,8 +23,7 @@ const mockThreads: Thread[] = [
   {
     id: "1",
     name: "Sarah Mwangi (Guide)",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100",
+    avatar: "/guides/joecalih.jpg",
     lastMessage:
       "I can confirm the booking for your group. Looking forward to the safari!",
     time: "2h ago",
@@ -34,8 +33,7 @@ const mockThreads: Thread[] = [
   {
     id: "2",
     name: "Adventure Seekers Group",
-    avatar:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=100",
+    avatar: "/loginImage.jpg",
     lastMessage: "Does anyone need help with visa arrangements?",
     time: "5h ago",
     unread: 0,
@@ -44,8 +42,7 @@ const mockThreads: Thread[] = [
   {
     id: "3",
     name: "John Kamau (Guide)",
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100",
+    avatar: "/guides/masaimale.jpg",
     lastMessage: "The migration is spectacular right now. Perfect timing!",
     time: "1d ago",
     unread: 1,
@@ -94,7 +91,7 @@ const mockMessages: { [key: string]: Message[] } = {
   ],
 };
 
-export function MessagesPage() {
+export default function MessagesPage() {
   const [activeThread, setActiveThread] = useState<string>("1");
   const [messageText, setMessageText] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
@@ -105,7 +102,6 @@ export function MessagesPage() {
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
     if (messageText.trim()) {
-      // In a real app, this would send the message to the backend
       setMessageText("");
     }
   };
@@ -120,7 +116,7 @@ export function MessagesPage() {
     <div className="h-[calc(100vh-5rem)] bg-merino-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full py-6">
         <div className="bg-white rounded-xl shadow-md h-full overflow-hidden flex">
-          {/* Threads List */}
+          {/* threads list section */}
           <div className="w-80 border-r border-merino-200 flex flex-col">
             <div className="p-4 border-b border-merino-200">
               <h2 className="mb-4 text-merino-950">Messages</h2>
@@ -179,11 +175,11 @@ export function MessagesPage() {
             </div>
           </div>
 
-          {/* Chat Panel */}
+          {/* chat panel section */}
           <div className="flex-1 flex flex-col">
             {currentThread ? (
               <>
-                {/* Chat Header */}
+                {/* chat header section */}
                 <div className="p-4 border-b border-merino-200 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <img
@@ -203,7 +199,7 @@ export function MessagesPage() {
                   </button>
                 </div>
 
-                {/* Messages */}
+                {/* messsages sectiion */}
                 <div className="flex-1 overflow-y-auto p-4 space-y-4">
                   {currentMessages.map((message) => (
                     <div
@@ -232,7 +228,7 @@ export function MessagesPage() {
                   ))}
                 </div>
 
-                {/* Message Input */}
+                {/* message input section */}
                 <div className="p-4 border-t border-merino-200">
                   <form onSubmit={handleSendMessage} className="flex gap-3">
                     <input

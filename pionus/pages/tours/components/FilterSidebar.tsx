@@ -64,7 +64,7 @@ export function FilterSidebar({
                   type="checkbox"
                   checked={selectedLocation.includes(loc)}
                   onChange={() => toggleLocation(loc)}
-                  className="w-4 h-4 text-tahiti-gold-500 border-merino-300 rounded `focus:ring-tahiti-gold-500`"
+                  className="w-4 h-4 text-tahiti-gold-500 border-merino-300 rounded focus:ring-tahiti-gold-500"
                 />
                 <span className="text-sm text-merino-700">{loc}</span>
               </label>

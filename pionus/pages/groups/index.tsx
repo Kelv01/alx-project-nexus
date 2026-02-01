@@ -78,7 +78,7 @@ function Groupspage() {
 
             <section className="mt-12 bg-merino-100 rounded-xl p-8">
               <div className="max-w-3xl">
-                <h3 className="mb-4 text-merino-950">
+                <h3 className="mb-4 text-merino-950 font-bold text-2xl">
                   Why Join an Open Group?
                 </h3>
                 <div className="space-y-3 text-merino-700">

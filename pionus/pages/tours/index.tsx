@@ -1,28 +1,14 @@
 import React, { useMemo, useState } from "react";
 import TourCard from "./components/TourCard";
 import { FilterSidebar } from "./components/FilterSidebar";
-//import { tours } from "../../data/tours";
-//import {getAllTours} from '@/pages/api/tours'
+
 import { getAllTours } from "../../lib/api/tours";
 import { GetStaticProps } from "next";
 
-type Tour = {
-  id: string;
-  title: string;
-  location: string;
-  duration: string;
-  price: number;
-  image: string;
-  groupSize: string;
-  verified: boolean;
-  description: string;
-  highlights: string[];
-  itinerary: { day: number; title: string; description: string }[];
-  guide: any;
-};
+import type { Tour } from "@/types/tour";
 
 type Props = {
-  tours: any[];
+  tours: Tour[];
 };
 
 function ToursListingPage({ tours }: Props) {
@@ -63,7 +49,7 @@ function ToursListingPage({ tours }: Props) {
         </div>
 
         <div className="flex gap-8">
-          {/* tour filters */}
+          {/* tour filters section */}
           <div className="hidden lg:block w-80 `flex-shrink-0`">
             <FilterSidebar
               selectedLocation={selectedLocations}
@@ -75,7 +61,7 @@ function ToursListingPage({ tours }: Props) {
             />
           </div>
 
-          {/* grid tours*/}
+          {/* grid tours section*/}
           <div className="flex-1">
             <div className="flex items-center justify-between mb-6">
               <p className="text-merino-700">

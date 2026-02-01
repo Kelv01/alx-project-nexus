@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Bird, Menu, User, UserLock, X } from "lucide-react";
+import { Bird, Menu, MessageCircle, User, UserLock, X } from "lucide-react";
 import { useRouter } from "next/router";
 import { navLinks } from "@/constants/nav_links";
+import Button from "../common/Button";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,40 +46,41 @@ function Header() {
             </ul>
           </div>
         </div>
-        {/* 
-        <div className="flex items-center justify-center p-4">
-          <Button variant="outline" size="md" className="rounded-lg">
-            <MessageCircle /> Message
-          </Button>
-        </div> */}
 
         {/* Login/Logout Buttons */}
         <div className="hidden md:block">
-          {isSignedIn ? (
-            <button
-              onClick={() => setIsSignedIn(false)}
-              className="bg-red hover:bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
-            >
-              <User className="h-4 w-4" />
-              <span>Sign Out</span>
-            </button>
-          ) : (
-            <Link
-              href="/auth/login"
-              className="bg-merino-600 hover:bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
-            >
-              <UserLock className="h-4 w-4" />
-              <span>Sign In</span>
+          <div className="flex items-center justify-center gap-6">
+            <Link href="/messages/message">
+              <Button variant="outline" size="md" className="rounded-lg">
+                <MessageCircle /> Message
+              </Button>
             </Link>
-          )}
+            {isSignedIn ? (
+              <Button
+                onClick={() => setIsSignedIn(false)}
+                className="bg-red hover:bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
+              >
+                <User className="h-4 w-4" />
+                <span>Sign Out</span>
+              </Button>
+            ) : (
+              <Link
+                href="/auth/login"
+                className="bg-merino-600 hover:bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
+              >
+                <UserLock className="h-4 w-4" />
+                <span>Sign In</span>
+              </Link>
+            )}
+          </div>
         </div>
         {/* Mobile Menu Button */}
-        <button
+        <Button
           onClick={() => setIsMenuOpen(true)}
           className="ml-4 text-merino-600 text-3xl md:hidden"
         >
           <Menu />
-        </button>
+        </Button>
       </nav>
 
       {/* Mobile Sidebar */}
@@ -113,13 +115,13 @@ function Header() {
         {/* LOGGING BUTTONS at the bottom left of the hamburger menu */}
         <div className="flex justify-start p-6 mt-46">
           {isSignedIn ? (
-            <button
+            <Button
               onClick={() => setIsSignedIn(false)}
               className="bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <User className="h-4 w-4" />
               <span>Sign Out</span>
-            </button>
+            </Button>
           ) : (
             <Link
               href="/auth/login"

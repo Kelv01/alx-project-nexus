@@ -19,9 +19,11 @@ function GroupCard({
     <div className="bg-white rounded-lg border border-merino-200 p-6 hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <h4 className="text-merino-950 mb-2">{tourName}</h4>
+          <h4 className="text-merino-950 mb-2 font-bold text-2xl">
+            {tourName}
+          </h4>
           <div className="flex items-center gap-2 text-sm text-merino-600">
-            <Calendar size={16} />
+            <Calendar />
             <span>Starts {startDate}</span>
           </div>
         </div>
@@ -36,7 +38,7 @@ function GroupCard({
       <div className="mb-4">
         <div className="flex items-center justify-between text-sm text-merino-700 mb-2">
           <div className="flex items-center gap-2">
-            <Users size={16} />
+            <Users />
             <span>
               {currentMembers} / {maxSize} members
             </span>
@@ -60,7 +62,7 @@ function GroupCard({
 
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 text-sm">
-          <DollarSign size={16} className="text-merino-600" />
+          <DollarSign className="text-merino-600" />
           <span className="text-merino-700">
             Save ${((maxSize - currentMembers) * 50).toLocaleString()} if full
           </span>

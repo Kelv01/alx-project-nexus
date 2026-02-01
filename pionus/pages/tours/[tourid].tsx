@@ -62,12 +62,12 @@ function ToursPage({ tour, tourGroups }: Props) {
 
   return (
     <section className="min-h-screen bg-merino-50">
-      {/* Hero Image */}
+      {/* hero image section */}
       <TourHero tour={tour} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Content */}
+          {/* ain Content section*/}
           <div className="lg:col-span-2">
             {/* Tabs */}
             <TourTabs
@@ -76,7 +76,7 @@ function ToursPage({ tour, tourGroups }: Props) {
               setActiveTab={setActiveTab}
             />
 
-            {/* Open Groups */}
+            {/* Open Groups  section*/}
             {tourGroups.length > 0 && (
               <div className="bg-white rounded-xl shadow-md p-6">
                 <h3 className="mb-4 text-merino-950">
@@ -91,7 +91,7 @@ function ToursPage({ tour, tourGroups }: Props) {
             )}
           </div>
 
-          {/* Sidebar */}
+          {/* sidebar section */}
           <TourSidebar tour={tour} />
         </div>
       </div>

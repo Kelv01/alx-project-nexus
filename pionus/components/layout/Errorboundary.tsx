@@ -35,9 +35,6 @@ export class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo,
     });
-
-    // In production, you would log this to an error reporting service
-    // e.g., Sentry, LogRocket, etc.
   }
 
   handleReset = () => {
@@ -61,14 +58,12 @@ export class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen bg-merino-50 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white rounded-xl shadow-lg p-8">
-            {/* Icon */}
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center">
                 <AlertTriangle className="w-10 h-10 text-red-600" />
               </div>
             </div>
 
-            {/* Title */}
             <h1 className="text-2xl text-merino-950 text-center mb-3">
               Oops! Something went wrong
             </h1>
@@ -77,7 +72,6 @@ export class ErrorBoundary extends Component<Props, State> {
               it.
             </p>
 
-            {/* Error Details (Development Only) */}
             {process.env.NODE_ENV === "development" && this.state.error && (
               <div className="bg-merino-50 border border-merino-200 rounded-lg p-4 mb-6 max-h-60 overflow-auto">
                 <p className="text-sm text-merino-950 mb-2">
@@ -88,7 +82,7 @@ export class ErrorBoundary extends Component<Props, State> {
                     <summary className="cursor-pointer hover:text-merino-900">
                       Stack Trace
                     </summary>
-                    <pre className="mt-2 whitespace-pre-wrap break-words">
+                    <pre className="mt-2 whitespace-pre-wrap wrap-break-words">
                       {this.state.errorInfo.componentStack}
                     </pre>
                   </details>
@@ -96,11 +90,10 @@ export class ErrorBoundary extends Component<Props, State> {
               </div>
             )}
 
-            {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={this.handleReset}
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-[#e67e22] text-white rounded-lg hover:bg-[#d35400] transition-colors"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-tahiti-gold-500 text-white rounded-lg hover:bg-tahiti-gold-700 transition-colors"
               >
                 <RefreshCw className="w-5 h-5" />
                 Try Again
@@ -120,13 +113,12 @@ export class ErrorBoundary extends Component<Props, State> {
               </button>
             </div>
 
-            {/* Support Info */}
             <div className="mt-8 pt-6 border-t border-merino-200 text-center">
               <p className="text-sm text-merino-600">
                 If this problem persists, please contact our support team at{" "}
                 <a
                   href="mailto:support@archsafaris.com"
-                  className="text-[#e67e22] hover:underline"
+                  className="text-tahiti-gold-500 hover:underline"
                 >
                   support@archsafaris.com
                 </a>

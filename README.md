@@ -13,7 +13,7 @@ A modern web platform for booking and managing safari tours in East Africa. Buil
 
 ## Tech Stack
 
-- [Next.js 14](https://nextjs.org) – Pages Router with SSR & SSG
+- [Next.js 16](https://nextjs.org) – Pages Router with SSR & SSG
 - [TypeScript](https://www.typescriptlang.org) - Type-safe JavaScript
 - [Tailwind CSS](https://tailwindcss.com) - Utility-first styling
 - [pnpm](https://pnpm.io) - Fast, disk space efficient package manager
@@ -107,6 +107,8 @@ pionus/
 ├── tsconfig.json
 └── README.md
 ```
+
+**Note:** `pages/legal/privacy.tsx` and `pages/legal/terms.tsx` files exist as placeholders; their full legal content will be included in the next release. The `pages/contact/contact.tsx` page exists — contact functionality and time-based behavior will be implemented over time. The messaging UI exists in the frontend and will be served dynamically in production once the backend is available.
 
 ## Getting Started
 
@@ -257,7 +259,7 @@ pnpm start
 - Created `AppImage` component for consistent image handling
 - Organized public assets into categorized folders (tours, guides, testimonial, about)
 - Utilized Next.js Image component for automatic optimization
-- Implemented lazy loading for better performance
+- Implemented eager loading for better performance on hero sections
 
 ### Challenge 6: Navigation & Routing Structure
 
@@ -327,26 +329,17 @@ pnpm start
 
 ## Known Issues ⚠️
 
-- **Messaging**: The messaging UI foundation exists but is not currently accessible to end users. It requires backend integration and will be enabled once the real backend is live; messages will be available after user signup/authentication.
+- **Messaging**: The messaging UI foundation exists in the frontend and will be served dynamically in production once the backend is implemented. Messages will be available to authenticated users after the real backend is live (post-signup).
+- **Privacy & Terms**: `privacy.tsx` and `terms.tsx` pages are present as placeholders; final legal content will be added in the next release.
+- **Contact**: The contact page exists but its submission/back-end handling will be implemented over time.
 - **Access Control**: Some features are gated until backend-auth is implemented.
 
-## Roadmap / What to build next ✅
+## Roadmap
 
-- **Real Backend API**: Implement a full backend for tours, groups, messaging, and authentication. This will replace local/mock data and make messaging and other authenticated features live after sign up.
-- **Admin Dashboard**: Build an admin interface to manage guide verification, tour approvals, group moderation, and message moderation.
-- **Messaging Integration**: Connect the existing messaging UI to a real-time backend (WebSocket/Pusher/realtime DB) once the API is available.
-
-## Contributing
-
-When making changes:
-
-1. Create a feature branch
-2. Make your updates
-3. Test thoroughly before committing
-4. Commit with descriptive messages
-
-## Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [React Documentation](https://react.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs)
+- **Real Backend API**: Implement a backend for tours, groups, messaging, and authentication to replace mock data and enable authenticated features.
+- **Admin Dashboard**: Build an admin interface for guide verification, tour approvals, group moderation, and message moderation.
+- **Messaging Integration**: Connect the messaging UI to a real-time backend (WebSocket/Pusher/realtime DB) to enable live chat.
+- **Privacy & Terms**: Finalize and publish privacy policy and terms pages in the next release.
+- **Contact Form Backend**: Implement contact form submission handling and related time-based features once the backend is available.
+- **Privacy & Terms Content**: Finalize and publish the privacy policy and terms pages in the next release.
+- **Contact Form Backend**: Implement contact form submission handling and any time-based features (e.g., time-stamped messages or automated replies) once the backend is available.

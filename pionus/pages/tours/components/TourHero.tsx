@@ -1,9 +1,12 @@
 import AppImage from "@/components/common/AppImage";
 import { Calendar, MapPin, Users, Verified } from "lucide-react";
-import { tours } from "@/data/tours";
-import React from "react";
+import type { Tour } from "@/types/tour";
 
-function TourHero({ tour }: { tour: any }) {
+type TourHeroProps = {
+  tour: Tour;
+};
+
+function TourHero({ tour }: TourHeroProps) {
   return (
     <div className="relative  overflow-hidden">
       <AppImage
@@ -22,15 +25,15 @@ function TourHero({ tour }: { tour: any }) {
           <h1 className="text-white mb-2">{tour.title}</h1>
           <div className="flex flex-wrap gap-4 text-white">
             <div className="flex items-center gap-2">
-              <MapPin size={18} />
+              <MapPin />
               <span>{tour.location}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Calendar size={18} />
+              <Calendar />
               <span>{tour.duration}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users size={18} />
+              <Users />
               <span>{tour.groupSize}</span>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Home, Search, Compass, ArrowLeft, Bird } from "lucide-react";
 import { useRouter } from "next/router";
+import type { ReactElement } from "react";
 
 export default function NotFoundPage() {
   const router = useRouter();
@@ -43,7 +44,7 @@ export default function NotFoundPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
               onClick={() => router.back()}
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-[#e67e22] text-white rounded-lg hover:bg-[#d35400] transition-colors shadow-md"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-tahiti-gold-500 text-white rounded-lg hover:bg-[#d35400] transition-colors shadow-md"
             >
               <ArrowLeft className="w-5 h-5" />
               Go Back
@@ -68,7 +69,7 @@ export default function NotFoundPage() {
                   href={link.href}
                   className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all hover:-translate-y-1 group"
                 >
-                  <link.icon className="w-8 h-8 text-[#e67e22] mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <link.icon className="w-8 h-8 text-tahiti-gold-500 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <p className="text-merino-900">{link.label}</p>
                 </Link>
               ))}
@@ -93,3 +94,6 @@ export default function NotFoundPage() {
     </div>
   );
 }
+NotFoundPage.getLayout = function getLayout(page: ReactElement) {
+  return page;
+};

@@ -2,24 +2,25 @@ import AppImage from "@/components/common/AppImage";
 import { Dispatch, SetStateAction } from "react";
 import { Award, Languages, Star, Verified } from "lucide-react";
 
-import { tours } from "@/data/tours";
+// import { tours } from "@/data/tours";
+import { Tour } from "@/types/tour";
 
-type Tour = (typeof tours)[number];
+type TourTab = "overview" | "itinerary" | "guide" | "reviews";
 
 type TourTabsProps = {
   tour: Tour;
-  activeTab: "overview" | "itinerary" | "guide" | "reviews";
-  setActiveTab: Dispatch<
-    SetStateAction<"overview" | "itinerary" | "guide" | "reviews">
-  >;
+  activeTab: TourTab;
+  setActiveTab: Dispatch<SetStateAction<TourTab>>;
 };
+
+const TABS: TourTab[] = ["overview", "itinerary", "guide", "reviews"];
 
 function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
   return (
     <div className="bg-white rounded-xl shadow-md mb-6">
       <div className="border-b border-merino-200">
         <div className="flex gap-8 px-6">
-          {["overview", "itinerary", "guide", "reviews"].map((tab) => (
+          {TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab as any)}
@@ -40,7 +41,7 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
 
       <div className="p-6">
         {/*  */}
-        {/* Overview Tab */}
+
         {activeTab === "overview" && (
           <div className="space-y-6">
             <div>
@@ -67,7 +68,6 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
           </div>
         )}
 
-        {/* Itinerary Tab */}
         {activeTab === "itinerary" && (
           <div className="space-y-4">
             <h3 className="mb-4 text-merino-950">Day by Day Itinerary</h3>
@@ -91,7 +91,6 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
           </div>
         )}
 
-        {/* Guide Tab */}
         {activeTab === "guide" && (
           <div>
             <h3 className="mb-6 text-merino-950">Your Safari Guide</h3>
@@ -110,19 +109,19 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
 
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2 text-merino-700">
-                    <Award size={16} />
+                    <Award />
                     <span className="text-sm">
                       License: {tour.guide.license}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-merino-700">
-                    <Star size={16} />
+                    <Star />
                     <span className="text-sm">
                       {tour.guide.experience} experience
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-merino-700">
-                    <Languages size={16} />
+                    <Languages />
                     <span className="text-sm">
                       {tour.guide.languages.join(", ")}
                     </span>
@@ -131,7 +130,7 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
 
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-1">
-                    <Star size={18} className="text-amber-500 fill-amber-500" />
+                    <Star className="text-amber-500 fill-amber-500" />
                     <span className="text-merino-950">{tour.guide.rating}</span>
                   </div>
                   <span className="text-sm text-merino-600">
@@ -143,7 +142,6 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
           </div>
         )}
 
-        {/* Reviews Tab */}
         {activeTab === "reviews" && (
           <div>
             <h3 className="mb-6 text-merino-950">Traveler Reviews</h3>
@@ -190,7 +188,6 @@ function TourTabs({ tour, activeTab, setActiveTab }: TourTabsProps) {
                         {Array.from({ length: review.rating }).map((_, i) => (
                           <Star
                             key={i}
-                            size={14}
                             className="text-amber-500 fill-amber-500"
                           />
                         ))}
