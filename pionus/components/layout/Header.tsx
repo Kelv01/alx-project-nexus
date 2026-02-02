@@ -50,7 +50,7 @@ function Header() {
         {/* Login/Logout Buttons */}
         <div className="hidden md:block">
           <div className="flex items-center justify-center gap-6">
-            <Link href="/messages/message">
+            <Link href="/messages">
               <Button variant="outline" size="md" className="rounded-lg">
                 <MessageCircle /> Message
               </Button>
@@ -77,7 +77,8 @@ function Header() {
         {/* Mobile Menu Button */}
         <Button
           onClick={() => setIsMenuOpen(true)}
-          className="ml-4 text-merino-600 text-3xl md:hidden"
+          variant="secondary"
+          className="ml-4 bg-transparent hover:bg-transparent text-3xl md:hidden"
         >
           <Menu />
         </Button>
@@ -113,11 +114,11 @@ function Header() {
         </ul>
 
         {/* LOGGING BUTTONS at the bottom left of the hamburger menu */}
-        <div className="flex justify-start p-6 mt-46">
+        <div className="flex justify-start p-6 mt-46  ">
           {isSignedIn ? (
             <Button
               onClick={() => setIsSignedIn(false)}
-              className="bg-merino-600 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
+              className="bg-tahiti-gold-500 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <User className="h-4 w-4" />
               <span>Sign Out</span>
@@ -125,7 +126,7 @@ function Header() {
           ) : (
             <Link
               href="/auth/login"
-              className="bg-400 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
+              className="bg-tahiti-gold-500 text-white px-6 py-2 rounded-lg transition-all duration-200 flex items-center space-x-2"
             >
               <UserLock className="h-4 w-4" />
               <span>Sign In</span>

@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import { ErrorBoundary } from "../components/layout/Errorboundary";
-import { Montserrat, Playfair_Display } from "next/font/google";
+import { Montserrat, Roboto_Serif } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -12,9 +12,10 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const roboto = Roboto_Serif({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-roboto-serif",
+  display: "swap",
 });
 
 export type NextPageWithLayout = NextPage & {
@@ -32,7 +33,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
     //   <Component {...pageProps} />
     // </Layout>
 
-    <main className={`${montserrat.variable} ${playfair.variable}`}>
+    <main className={`${montserrat.variable} ${roboto.variable}`}>
       <ErrorBoundary>{getLayout(<Component {...pageProps} />)}</ErrorBoundary>
     </main>
   );

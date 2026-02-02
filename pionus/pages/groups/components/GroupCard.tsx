@@ -2,6 +2,7 @@ import { Users, Calendar, DollarSign } from "lucide-react";
 import Button from "../../../components/common/Button";
 
 import { GroupCardProps } from "@/interfaces/GroupCard";
+import Link from "next/link";
 
 function GroupCard({
   tourName,
@@ -67,9 +68,11 @@ function GroupCard({
             Save ${((maxSize - currentMembers) * 50).toLocaleString()} if full
           </span>
         </div>
-        <Button variant="primary" size="sm" className="rounded-lg">
-          Join Group
-        </Button>
+        <Link href="/messages">
+          <Button variant="primary" size="sm" className="rounded-lg">
+            Join Group
+          </Button>
+        </Link>
       </div>
 
       {daysLeft <= 7 && (

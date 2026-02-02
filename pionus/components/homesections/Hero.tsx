@@ -1,5 +1,5 @@
 import React from "react";
-import background from "../../public/sutirta.webp";
+import background from "../../public/elephants.jpg";
 import Button from "../common/Button";
 import { Search, Users } from "lucide-react";
 import AppImage from "@/components/common/AppImage";
@@ -8,7 +8,13 @@ function Hero() {
   return (
     <section className="relative min-h-[75svh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center">
-        <AppImage src={background} alt="backround image" fill loading="eager" />
+        <AppImage
+          src={background}
+          alt="backround image"
+          fill
+          variant="hero"
+          loading="eager"
+        />
         <div className="absolute inset-0 bg-linear-to-r from-merino-950/80 to-merino-900/60" />
       </div>
       <div className="relative z-10 inset-0 max-w-4xl mx-auto px-4 text-center text-white">

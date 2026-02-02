@@ -28,7 +28,7 @@ const Footer = () => {
             <ul>
               <li>
                 <Link
-                  href="/tours/tours"
+                  href="/tours"
                   className="text-merino-200 hover:text-tahiti-gold-500"
                 >
                   Safari Tours
@@ -36,7 +36,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="groups/create"
+                  href="/groups"
                   className="text-merino-200 hover:text-tahiti-gold-500"
                 >
                   Open Groups
@@ -58,7 +58,7 @@ const Footer = () => {
             <ul>
               <li>
                 <Link
-                  href="/about/create"
+                  href="/about"
                   className="text-merino-200 hover:text-tahiti-gold-500"
                 >
                   About Us
@@ -66,7 +66,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="contact/contact"
+                  href="/contact"
                   className="text-merino-200 hover:text-tahiti-gold-500"
                 >
                   Contact

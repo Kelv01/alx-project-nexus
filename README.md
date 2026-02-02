@@ -54,42 +54,22 @@ pionus/
 │   ├── _app.tsx
 │   ├── _document.tsx
 │   ├── index.tsx
-│   ├── about/
-│   │   ├── index.tsx
-│   │   └── components/
-│   │       ├── Conservation.tsx
-│   │       ├── Corevalues.tsx
-│   │       ├── ImpactStats.tsx
-│   │       ├── Mission.tsx
-│   │       ├── OurStory.tsx
-│   │       ├── Team.tsx
-│   │       └── WhatsetsUsApart.tsx
-│   ├── api/
-│   │   └── hello.ts
+│   ├── 404.tsx
 │   ├── auth/
 │   │   ├── login.tsx
 │   │   └── register.tsx
-│   ├── contact/
-│   │   └── contact.tsx
-│   ├── groups/
+│   ├── about/
 │   │   ├── index.tsx
 │   │   └── components/
-│   │       └── GroupCard.tsx
-│   ├── legal/
-│   │   ├── privacy.tsx
-│   │   └── terms.tsx
 │   ├── messages/
 │   │   └── message.tsx
 │   ├── tours/
-│   │   ├── [tourid].tsx
 │   │   ├── index.tsx
+│   │   ├── [tourid].tsx
 │   │   └── components/
-│   │       ├── FilterSidebar.tsx
-│   │       ├── TourCard.tsx
-│   │       ├── TourGroupCard.tsx
-│   │       ├── TourHero.tsx
-│   │       ├── TourSidebar.tsx
-│   │       └── TourTabs.tsx
+│   └── legal/
+│       ├── privacy.tsx
+│       └── terms.tsx
 ├── public/
 │   ├── about/
 │   ├── guides/
@@ -97,14 +77,9 @@ pionus/
 │   └── tours/
 ├── styles/
 │   └── globals.css
-├── eslint.config.mjs
-├── next-env.d.ts
 ├── next.config.ts
-├── package.json
-├── pnpm-lock.yaml
-├── pnpm-workspace.yaml
-├── postcss.config.mjs
 ├── tsconfig.json
+├── package.json
 └── README.md
 ```
 

@@ -7,9 +7,13 @@ function Button({
   variant = "primary",
   size = "sm",
   className,
+  type = "button",
+  ...props
 }: ButtonProps) {
   return (
     <button
+      type={type}
+      {...props}
       className={clsx(
         "inline-flex gap-2 items-center justify-center transition",
         {
@@ -27,7 +31,7 @@ function Button({
           "px-8 py-3 text-lg": size === "lg",
         },
 
-        className
+        className,
       )}
     >
       {children}

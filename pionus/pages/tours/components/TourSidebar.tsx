@@ -1,28 +1,30 @@
 import Button from "@/components/common/Button";
 import Link from "next/link";
+import type { Tour } from "@/types/tour";
 
-function TourSidebar({ tour }: { tour: any }) {
+type TourSidebarProps = {
+  tour: Tour;
+};
+
+function TourSidebar({ tour }: TourSidebarProps) {
   return (
     <div className="lg:col-span-1">
       <div className="bg-white rounded-xl shadow-md p-6 sticky top-24">
         <div className="mb-6">
           <p className="text-sm text-merino-600 mb-1">Starting from</p>
-          <p
-            className="text-merino-950"
-            style={{ fontFamily: "var(--font-family-serif)" }}
-          >
-            ${tour.price.toLocaleString()}
-          </p>
+          <p className="text-merino-950">${tour.price.toLocaleString()}</p>
           <p className="text-xs text-merino-600 mt-1">per person</p>
         </div>
 
         <div className="space-y-3">
-          <Link href={`/groups?tour=${tour.id}`}>
+          {/* <Link href={`/groups?tour=${tour.id}`}> */}
+          <Link href="/messages">
             <Button variant="primary" size="md" className="w-full">
               Join an Open Group
             </Button>
           </Link>
-          <Link href={`/create-group?tour=${tour.id}`}>
+          {/* <Link href={`/create-group?tour=${tour.id}`}> */}
+          <Link href="/messages">
             <Button variant="secondary" size="md" className="w-full">
               Create Your Group
             </Button>
