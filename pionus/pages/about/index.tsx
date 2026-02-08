@@ -15,12 +15,13 @@ function AboutPage() {
   return (
     <>
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center">
+        <div className="absolute inset-0 ">
           <AppImage
             src={background}
             fill
             loading="eager"
             alt="background image"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-merino-950/90 to-merino-900/70 " />
         </div>

@@ -191,19 +191,22 @@ function login() {
 
       {/* right column with image*/}
       <div className="hidden lg:block lg:w-1/2 relative">
-        <div className="absolute inset-0 bg-cover bg-center">
+        <div className="absolute inset-0">
           <AppImage
             variant="card"
             loading="eager"
             fill
             alt="giraffe"
             src="/loginImage.jpg"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-merino-900/80 to-[#e67e22]/40" />
         </div>
         <div className="relative h-full flex items-center justify-center p-12">
           <div className="text-white text-center max-w-lg">
-            <h2 className="mb-4 text-white">Your Safari Adventure Awaits</h2>
+            <h2 className="mb-4 text-white font-bold text-3xl">
+              Your Safari Adventure Awaits
+            </h2>
             <p className="text-xl text-merino-100 leading-relaxed">
               Join thousands of travelers exploring East Africa's most
               incredible wildlife and landscapes with verified local guides.

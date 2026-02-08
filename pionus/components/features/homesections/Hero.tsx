@@ -8,13 +8,14 @@ import Link from "next/link";
 function Hero() {
   return (
     <section className="relative min-h-[75svh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center">
+      <div className="absolute inset-0">
         <AppImage
           src={background}
           alt="backround image"
           fill
           variant="hero"
           loading="eager"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-linear-to-r from-merino-950/80 to-merino-900/60" />
       </div>
