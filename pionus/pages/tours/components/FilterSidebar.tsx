@@ -11,7 +11,7 @@ type Props = {
   onPriceChange: (range: [number, number]) => void;
 };
 
-export function FilterSidebar({
+function FilterSidebar({
   selectedLocation,
   onLocationChange,
   duration,
@@ -133,3 +133,4 @@ export function FilterSidebar({
     </div>
   );
 }
+export default FilterSidebar;

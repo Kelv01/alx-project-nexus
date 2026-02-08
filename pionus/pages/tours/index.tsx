@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import TourCard from "./components/TourCard";
-import { FilterSidebar } from "./components/FilterSidebar";
+import FilterSidebar from "./components/FilterSidebar";
 
 import { getAllTours } from "../../lib/api/tours";
 import { GetStaticProps } from "next";

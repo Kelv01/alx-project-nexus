@@ -3,6 +3,7 @@ import background from "../../public/elephants.jpg";
 import Button from "../common/Button";
 import { Search, Users } from "lucide-react";
 import AppImage from "@/components/common/AppImage";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -26,15 +27,26 @@ function Hero() {
           who value connection, trust, and adventure
         </p>
         <div className="flex flex-wrap gap-8 justify-center">
-          <Button size="lg" className="rounded-lg">
-            <Search className="" />
-            Find Tours
-          </Button>
-          <Button size="lg" variant="transparent" className="rounded-lg border">
-            {" "}
-            <Users />
-            Find Tours
-          </Button>
+          <Link href="/tours">
+            <Button
+              size="lg"
+              className="rounded-lg bg-tahiti-gold-500 hover:bg-tahiti-gold-600 "
+            >
+              <Search className="" />
+              Find Tours
+            </Button>
+          </Link>
+          <Link href="/tours">
+            <Button
+              size="lg"
+              variant="transparent"
+              className="rounded-lg border"
+            >
+              {" "}
+              <Users />
+              Find Tours
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

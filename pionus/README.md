@@ -1,22 +1,46 @@
-# Pionus Safaris - Frontend
+# Pionus Safaris – Frontend
 
-A modern web platform for booking and managing safari tours in East Africa. Built with [Next.js](https://nextjs.org) and TypeScript, providing an intuitive interface for travelers to discover, book, and manage group safaris.
+A modern **frontend web platform** for discovering, organizing, and preparing safari tour bookings in East Africa.  
+Built with **Next.js (Pages Router)** and **TypeScript**, this project focuses on scalable UI architecture, strong typing, and clean separation of concerns — while remaining fully backend-ready.
+
+**Live Demo (placeholder):**  
+https://your-deployed-site-url.com
+
+---
+
+## Project Overview
+
+Pionus Safaris aims to reduce friction in planning group safari experiences by providing:
+
+- Clear tour discovery and pricing visibility
+- UI flows for group coordination
+- A foundation for guide verification and in-app communication
+
+This repository represents the **frontend implementation only**.  
+All data is currently mock-driven, and backend services are intentionally deferred.
+
+---
 
 ## Features
 
-- **Tour Discovery**: Browse and filter available safari tours
-- **Group Management**: Create and manage tour groups with real-time member tracking
-- **Messaging System**: Messaging UI foundation (extensible to real-time communication)
-- **Authentication**: Secure user registration and login
-- **Price Tracking**: Detailed price breakdown and split management
-- **Verified Guides**: Browse trusted and verified safari guides
+- **Tour Discovery** – Browse and explore available safari tours
+- **Tour Details Pages** – Dynamic routing for individual tour views
+- **Group Management (UI)** – Interfaces for creating and viewing group participation
+- **Messaging (UI Foundation)** – Frontend messaging layout designed for future real-time integration
+- **Authentication Pages** – Login and registration screens with validation
+- **Price Visibility** – Clear pricing display and cost-splitting concepts
+- **Verified Guides (UI)** – Guide listings with trust and verification indicators
+
+---
 
 ## Tech Stack
 
-- [Next.js 14](https://nextjs.org) – Pages Router with SSR & SSG
-- [TypeScript](https://www.typescriptlang.org) - Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com) - Utility-first styling
-- [pnpm](https://pnpm.io) - Fast, disk space efficient package manager
+- **Next.js (Pages Router)** – Server-Side Rendering (SSR) & Static Site Generation (SSG)
+- **TypeScript** – Type-safe JavaScript for maintainability
+- **Tailwind CSS** – Utility-first styling
+- **pnpm** – Fast, disk-efficient package manager
+
+---
 
 ## Project Structure
 
@@ -54,42 +78,22 @@ pionus/
 │   ├── _app.tsx
 │   ├── _document.tsx
 │   ├── index.tsx
-│   ├── about/
-│   │   ├── index.tsx
-│   │   └── components/
-│   │       ├── Conservation.tsx
-│   │       ├── Corevalues.tsx
-│   │       ├── ImpactStats.tsx
-│   │       ├── Mission.tsx
-│   │       ├── OurStory.tsx
-│   │       ├── Team.tsx
-│   │       └── WhatsetsUsApart.tsx
-│   ├── api/
-│   │   └── hello.ts
+│   ├── 404.tsx
 │   ├── auth/
 │   │   ├── login.tsx
 │   │   └── register.tsx
-│   ├── contact/
-│   │   └── contact.tsx
-│   ├── groups/
+│   ├── about/
 │   │   ├── index.tsx
 │   │   └── components/
-│   │       └── GroupCard.tsx
-│   ├── legal/
-│   │   ├── privacy.tsx
-│   │   └── terms.tsx
 │   ├── messages/
 │   │   └── message.tsx
 │   ├── tours/
-│   │   ├── [tourid].tsx
 │   │   ├── index.tsx
+│   │   ├── [tourid].tsx
 │   │   └── components/
-│   │       ├── FilterSidebar.tsx
-│   │       ├── TourCard.tsx
-│   │       ├── TourGroupCard.tsx
-│   │       ├── TourHero.tsx
-│   │       ├── TourSidebar.tsx
-│   │       └── TourTabs.tsx
+│   └── legal/
+│       ├── privacy.tsx
+│       └── terms.tsx
 ├── public/
 │   ├── about/
 │   ├── guides/
@@ -97,16 +101,13 @@ pionus/
 │   └── tours/
 ├── styles/
 │   └── globals.css
-├── eslint.config.mjs
-├── next-env.d.ts
 ├── next.config.ts
-├── package.json
-├── pnpm-lock.yaml
-├── pnpm-workspace.yaml
-├── postcss.config.mjs
 ├── tsconfig.json
+├── package.json
 └── README.md
 ```
+
+---
 
 ## Getting Started
 
@@ -144,209 +145,80 @@ pnpm start
 - **Linting**: ESLint configured for code quality
 - **Hot Reload**: Pages auto-update on file changes during development
 
-## Key Technologies Covered
+# Project Overview
 
-### Web Development
+## Frontend Architecture
 
-- **Next.js 14** - Modern React framework with Pages Router, Server-Side Rendering (SSR), and Static Generation (SSG)
-- **React** - Component-based UI library for building interactive interfaces
-- **TypeScript** - Static typing for safer, more maintainable JavaScript code
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+### Routing & Rendering
 
-### Frontend Development Architecture
+- Dynamic routing implemented via `pages/tours/[tourid].tsx`
+- Static generation used for marketing and listing pages
+- Client-side navigation via Next.js router
 
-- **Component-Based Design** - Modular components for reusability and maintainability
-- **Page Router Structure** - Organized file-based routing system for multi-page applications
-- **Responsive Design** - Mobile-first approach ensuring cross-device compatibility
-- **State Management** - React hooks for managing component state and side effects
+### Data Handling
 
-### Package Management & Build Tools
+- Mock data stored in `/data`
+- API abstraction layer in `/lib/api`
+- Designed to integrate real backend services without UI refactors
 
-- **pnpm** - Fast, efficient package manager with monorepo support
-- **PostCSS** - CSS transformation tool for processing Tailwind CSS
+### TypeScript Usage
 
-## Important Frontend Development Concepts
-
-### Next.js Features
-
-- **Dynamic Routes** - Handling tour details via `[tourid].tsx` parameter-based routing
-- **API Routes** - Backend endpoints using `/api` directory structure
-- **Image Optimization** - Efficient image delivery for tour galleries and guide profiles
-- **Code Splitting** - Automatic optimization for faster page loads
-- **Data-Fetching Strategy** - Static generation is used where possible (landing pages, tour listings), while server-side rendering is applied for dynamic and authenticated pages
-
-### TypeScript Implementation
-
-- **Interface Definitions** - Custom types for `TourCardProps`, `GroupCard`, `Testimonial`, and `Button` components
-- **Type Safety** - Compile-time error detection preventing runtime bugs
-- **Props Validation** - Ensuring component contracts through typed interfaces
+- Explicit interfaces for components and data models
+- Strongly typed props and state
+- Avoidance of `any` to reduce runtime errors
 
 ### Styling Strategy
 
-- **Tailwind CSS** - Consistent design system with utility classes
-- **Component Styling** - Encapsulated styles within component files
-- **Responsive Breakpoints** - Tailwind's responsive prefixes for adaptive layouts
-- **Custom Configuration** - PostCSS integration for advanced CSS processing
+- Tailwind CSS for consistent and responsive layouts
+- Mobile-first design approach
+- Shared layout components (Header, Footer, Layout)
 
-### System Design & Analysis
+---
 
-- **Component Hierarchy** - Logical organization of UI components by feature (common, layout, ui sections)
-- **Data Flow** - Props-based communication between parent and child components
-- **Code Organization** - Separation of concerns: components, pages, interfaces, data, and constants
-- **Scalability** - Modular structure supporting feature expansion
+## Project Scope Clarification
 
-### API Integration
+This project intentionally focuses on frontend architecture and user experience.
 
-- **Data Fetching** - Integration with backend APIs for tours, groups, and user data
-- **Messaging System** - Real-time chat functionality between guides and travelers
-- **Authentication** - Authentication pages are implemented with form validation and designed to integrate with server-side session-based authentication
-- **Admin Dashboard** - An admin dashboard (planned) will manage guide verification, tour approvals, and group moderation
-- **Dynamic Content** - Fetching and rendering tour information, prices, and availability
+### Implemented
 
-## Challenges Faced & Solutions Implemented
+- UI components and layouts
+- Routing and navigation
+- Mock-driven data flow
+- Backend-ready frontend structure
 
-### Challenge 1: Complex Component State Management
+### Not Yet Implemented
 
-**Problem**: Managing state across multiple related components (groups, tours, messaging)
+- Backend APIs
+- Real authentication logic
+- Payments
+- Real-time messaging
 
-**Solution**:
+> These features are planned and supported by the current structure but are out of scope for this repository.
 
-- Implemented React hooks (`useState`, `useEffect`) for local component state
-- Created shared interfaces for consistent data structures
-- Used component composition to pass state through props efficiently
-- Established clear data flow patterns from parent to child components
+---
 
-### Challenge 2: Dynamic Route Handling
+## Known Limitations
 
-**Problem**: Creating dynamic tour detail pages with proper URL parameters
+- **Messaging:** UI only; real-time backend integration planned
+- **Authentication:** Frontend pages only; server-side auth not implemented
+- **Payments:** UI concepts only
+- **Legal Pages:** `privacy.tsx` and `terms.tsx` are placeholders
 
-**Solution**:
+---
 
-- Leveraged Next.js dynamic route convention with `[tourid].tsx`
-- Implemented TypeScript interfaces for type-safe route parameters
-- Used Next.js router for client-side navigation
+## Roadmap
 
-### Challenge 3: Responsive Design Implementation
+1. Integrate backend APIs for tours, groups, and authentication
+2. Add real-time messaging support
+3. Build an admin dashboard for guide verification
+4. Finalize legal content
+5. Implement contact and support workflows
 
-**Problem**: Ensuring consistent user experience across mobile, tablet, and desktop devices
+---
 
-**Solution**:
+## Key Takeaways
 
-- Implemented Tailwind CSS responsive breakpoints throughout components
-- Designed mobile-first approach with progressive enhancement
-- Created responsive layout components (Header, Footer, Layout)
-- Tested layouts at multiple viewport sizes
-
-### Challenge 4: Form Validation & User Input
-
-**Problem**: Managing user input validation for authentication and contact forms
-
-**Solution**:
-
-- Created reusable `Input` component with validation support
-- Implemented TypeScript interfaces for form data
-- Used controlled components for secure form handling
-- Added error handling and user feedback mechanisms
-
-### Challenge 5: Image Optimization & Asset Management
-
-**Problem**: Handling and optimizing multiple tour images, guide photos, and testimonial media
-
-**Solution**:
-
-- Created `AppImage` component for consistent image handling
-- Organized public assets into categorized folders (tours, guides, testimonial, about)
-- Utilized Next.js Image component for automatic optimization
-- Implemented lazy loading for better performance
-
-### Challenge 6: Navigation & Routing Structure
-
-**Problem**: Managing complex navigation across multiple sections (tours, groups, messages, auth)
-
-**Solution**:
-
-- Centralized navigation links in `constants/nav_links.ts`
-- Created reusable Header and Footer components
-- Implemented nested routing for feature-specific pages
-- Used TypeScript for route safety
-
-**Trade-offs**: Context API was avoided in early stages to reduce complexity, with potential migration planned as state sharing grows
-
-## Best Practices & Personal Takeaways
-
-### Code Organization & Architecture
-
-- **Component Modularization** - Each component handles a single responsibility, making code maintainable and testable
-- **Interface-Based Development** - Defining clear contracts through TypeScript interfaces prevents bugs and improves documentation
-- **DRY Principle** - Reusable components in `/common` folder eliminate code duplication
-- **Feature-Based Organization** - Grouping related components by feature (group, tour, messaging) improves project navigation
-
-### Frontend Development Patterns
-
-- **Props Drilling vs. Context** - Understanding when to use props vs. context API for state management
-- **Controlled Components** - Using React state to manage form inputs for predictable behavior
-- **Component Composition** - Building complex UIs by combining simple, single-purpose components
-- **Separation of Concerns** - Keeping UI logic, styling, and data fetching separate
-
-### TypeScript Best Practices
-
-- **Strong Typing** - Always define explicit types for props, state, and function parameters
-- **Interface Over Implementation** - Use interfaces for contracts and types for unions/primitives
-- **Avoiding `any`** - Strict typing prevents silent errors and improves IDE support
-- **Generic Types** - Using generics for flexible, reusable component patterns
-
-### Styling & UI/UX
-
-- **Utility-First CSS** - Tailwind's utility classes provide consistency without writing custom CSS
-- **Design System** - Creating Badge, Button, and Input components ensures visual consistency
-- **Responsive-First Design** - Building mobile experience first, then scaling up improves accessibility
-- **Component-Scoped Styles** - Keeping styles close to components improves maintainability
-
-### Performance Optimization
-
-- **Image Optimization** - Using Next.js Image component for automatic lazy loading and format conversion
-- **Code Splitting** - Next.js automatically splits code per route for faster initial loads
-- **Asset Organization** - Properly organizing public files improves build performance
-- **CSS Optimization** - PostCSS and Tailwind purge unused styles automatically
-
-### Development Workflow
-
-- **Type-First Development** - Defining interfaces before implementation prevents design issues
-- **Consistent Naming** - Using descriptive, consistent naming conventions improves code readability
-- **Hot Reload During Development** - Leveraging pnpm dev for instant feedback while building
-- **ESLint Configuration** - Maintaining code quality standards across the team
-
-### Key Learnings
-
-1. **Type Safety Matters** - TypeScript catches errors at compile time that would otherwise cause runtime failures
-2. **Component Design is Critical** - Well-designed components are easier to test, reuse, and maintain
-3. **Next.js Powers Modern Web Apps** - Features like SSR, SSG, and API routes simplify full-stack development
-4. **Tailwind Accelerates Development** - Utility-first approach is faster than traditional CSS writing
-5. **Data Flow Clarity** - Clear, unidirectional data flow (props down, events up) prevents state bugs
-6. **Testing Early** - Catching issues during development is far more efficient than post-launch fixes
-
-## Known Issues ⚠️
-
-- **Messaging**: The messaging UI foundation exists but is not currently accessible to end users. It requires backend integration and will be enabled once the real backend is live; messages will be available after user signup/authentication.
-- **Access Control**: Some features are gated until backend-auth is implemented.
-
-## Roadmap / What to build next ✅
-
-- **Real Backend API**: Implement a full backend for tours, groups, messaging, and authentication. This will replace local/mock data and make messaging and other authenticated features live after sign up.
-- **Admin Dashboard**: Build an admin interface to manage guide verification, tour approvals, group moderation, and message moderation.
-- **Messaging Integration**: Connect the existing messaging UI to a real-time backend (WebSocket/Pusher/realtime DB) once the API is available.
-
-## Contributing
-
-When making changes:
-
-1. Create a feature branch
-2. Make your updates
-3. Test thoroughly before committing
-4. Commit with descriptive messages
-
-## Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [React Documentation](https://react.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs)
+- Clear separation of concerns improves frontend scalability
+- Mock-first development enables rapid UI iteration
+- Strong typing increases confidence and maintainability
+- Intentional scope control prevents premature over-engineering

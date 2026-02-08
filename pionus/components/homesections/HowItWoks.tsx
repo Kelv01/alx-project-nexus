@@ -21,7 +21,7 @@ function HowItWoks() {
             <div className="flex items-center justify-center mb-4">
               <MapPin className="text-merino-700" />
             </div>
-            <h4 className="mb-3">Browse & Choose</h4>
+            <h4 className="mb-3 font-bold">Browse & Choose</h4>
             <p className="text-merino-700">
               Explore our curated safari tours, filter by location, duration,
               and price to find perfect adventure
@@ -35,7 +35,7 @@ function HowItWoks() {
             <div className="flex items-center justify-center mb-4">
               <Users className="text-merino-700" />
             </div>
-            <h4 className="mb-3">Join or Create a Group</h4>
+            <h4 className="mb-3 font-bold">Join or Create a Group</h4>
             <p className="text-merino-700">
               Join an existing group to share costs, or create your own group
               and invite others to join you
@@ -49,7 +49,7 @@ function HowItWoks() {
             <div className="flex items-center justify-center mb-4">
               <Clock className="text-merino-700" />
             </div>
-            <h4 className="mb-3">Book & Embark</h4>
+            <h4 className="mb-3 font-bold">Book & Embark</h4>
             <p className="text-merino-700">
               Complete your booking, connect with your group, and prepare for an
               unforgettable safari experience

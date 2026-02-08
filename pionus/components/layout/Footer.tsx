@@ -17,7 +17,7 @@ const Footer = () => {
                 <Link href="/">Pionus Safaris</Link>
               </h1>
             </div>
-            <p className="text-merino-200">
+            <p className="text-white">
               Experience the magic of East African safaris with verified guides
               and like minded travelers.
             </p>
@@ -29,7 +29,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/tours"
-                  className="text-merino-200 hover:text-tahiti-gold-500"
+                  className="text-white hover:text-tahiti-gold-500"
                 >
                   Safari Tours
                 </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/groups"
-                  className="text-merino-200 hover:text-tahiti-gold-500"
+                  className="text-white hover:text-tahiti-gold-500"
                 >
                   Open Groups
                 </Link>
@@ -45,7 +45,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="tours/tours"
-                  className="text-merino-200 hover:text-tahiti-gold-500"
+                  className="text-white hover:text-tahiti-gold-500"
                 >
                   Verified Guides
                 </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/about"
-                  className="text-merino-200 hover:text-tahiti-gold-500"
+                  className="text-white hover:text-tahiti-gold-500"
                 >
                   About Us
                 </Link>
@@ -67,7 +67,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="text-merino-200 hover:text-tahiti-gold-500"
+                  className="text-white hover:text-tahiti-gold-500"
                 >
                   Contact
                 </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="auth/login"
-                  className="text-merino-200 hover:text-tahiti-gold-500"
+                  className="text-white hover:text-tahiti-gold-500"
                 >
                   Login
                 </Link>
@@ -88,28 +88,28 @@ const Footer = () => {
             <div className="flex gap-4">
               <Link
                 href="#"
-                className="text-merino-300 hover:text-tahiti-gold-500 transition-colors"
+                className="text-white hover:text-tahiti-gold-500 transition-colors"
               >
                 {" "}
                 <FaFacebookF />{" "}
               </Link>
               <Link
                 href="#"
-                className="text-merino-300 hover:text-tahiti-gold-500 transition-colors"
+                className="text-white hover:text-tahiti-gold-500 transition-colors"
               >
                 {" "}
                 <FaXTwitter />{" "}
               </Link>
               <Link
                 href="#"
-                className="text-merino-300 hover:text-tahiti-gold-500 transition-colors"
+                className="text-white hover:text-tahiti-gold-500 transition-colors"
               >
                 {" "}
                 <FaInstagram />{" "}
               </Link>
               <Link
                 href="#"
-                className="text-merino-300 hover:text-tahiti-gold-500 transition-colors"
+                className="text-white hover:text-tahiti-gold-500 transition-colors"
               >
                 {" "}
                 <CiMail />
@@ -117,7 +117,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-merino-800 pt-8 text-center text-sm text-merino-400">
+        <div className="border-t border-merino-800 pt-8 text-center text-sm text-white">
           <p>&copy; 2026 Pionus Safaris </p>
         </div>
       </div>

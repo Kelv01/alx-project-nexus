@@ -30,8 +30,13 @@ function TourCard({
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
         {verified && (
-          <div className="absolute top-4 right-4">
-            <Verified className="text-tahiti-gold-600" />
+          <div className="absolute top-4 left-4 ">
+            <p className="flex gap-2 px-1.5 py-1.5 bg-merino-950/70 rounded-xl text-white">
+              <span>
+                <Verified className="text-white" />
+              </span>
+              Verified{" "}
+            </p>
           </div>
         )}
       </div>
