@@ -4,7 +4,7 @@ A modern **frontend web platform** for discovering, organizing, and preparing sa
 Built with **Next.js (Pages Router)** and **TypeScript**, this project focuses on scalable UI architecture, strong typing, and clean separation of concerns — while remaining fully backend-ready.
 
 **Live Demo (placeholder):**  
-https://your-deployed-site-url.com
+https://alx-project-nexus-pionus-safaris.vercel.app/
 
 ---
 
