@@ -1,16 +1,16 @@
 //import { tours, openGroups } from "../../data/tours";
 import { useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import TourHero from "@/pages/tours/components/TourHero";
-import TourTabs from "@/pages/tours/components/TourTabs";
-import TourSidebar from "@/pages/tours/components/TourSidebar";
-import { GroupCard } from "./components/TourGroupCard";
+import TourHero from "@/components/features/toursSections/TourHero";
+import TourTabs from "@/components/features/toursSections/TourTabs";
+import TourSidebar from "@/components/features/toursSections/TourSidebar";
 
 import {
   getAllTours,
   getTourById,
   getOpenGroupsByTourId,
 } from "@/lib/api/tours";
+import GroupCard from "@/components/features/toursSections/TourGroupCard";
 
 type Tour = Awaited<ReturnType<typeof getTourById>>;
 type openGroup = Awaited<ReturnType<typeof getOpenGroupsByTourId>>[number];

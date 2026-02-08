@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Button from "../common/Button";
-import TourCard from "../../pages/tours/components/TourCard";
+import Button from "../../common/Button";
+
 import { tours } from "@/data/tours";
+import TourCard from "../toursSections/TourCard";
 
 function FeaturedTours() {
   const featuredTours = tours.slice(0, 3);

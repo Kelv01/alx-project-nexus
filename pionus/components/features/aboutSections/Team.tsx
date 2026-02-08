@@ -1,3 +1,4 @@
+import AppImage from "@/components/common/AppImage";
 import { MapPin } from "lucide-react";
 import React from "react";
 
@@ -19,30 +20,44 @@ function Team() {
               name: "David Kimani",
               role: "Founder & CEO",
               location: "Nairobi, Kenya",
+              image: "/team/davidkim.jpg",
             },
             {
-              name: "Sarah Mwangi",
+              name: "Sarah Amani",
               role: "Head of Guide Relations",
               location: "Arusha, Tanzania",
+              image: "/team/sarahamani.jpg",
             },
             {
               name: "Michael Odhiambo",
               role: "Chief Technology Officer",
               location: "Nairobi, Kenya",
+              image: "/team/odhiambo.jpg",
             },
             {
               name: "Grace Namukasa",
               role: "Conservation Director",
               location: "Kampala, Uganda",
+              image: "/team/grace.jpg",
             },
           ].map((member, index) => (
             <div key={index} className="text-center">
               <div className="w-32 h-32 bg-merino-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <MapPin className="text-merino-500" size={48} />
+                <AppImage
+                  src={member.image}
+                  variant="avatar"
+                  alt={`Picture of ${member.name}`}
+                  className="h-32 w-32"
+                />
+                {/* <MapPin className="text-merino-500" size={48} /> */}
               </div>
-              <h5 className="mb-1 text-merino-950 font-bold">{member.name}</h5>
-              <p className="text-tahiti-gold-500 mb-1">{member.role}</p>
-              <p className="text-sm text-merino-600">{member.location}</p>
+              <div className="mt-4">
+                <h5 className="mb-1 text-merino-950 font-bold">
+                  {member.name}
+                </h5>
+                <p className="text-tahiti-gold-500 mb-1">{member.role}</p>
+                <p className="text-sm text-merino-600">{member.location}</p>
+              </div>
             </div>
           ))}
         </div>

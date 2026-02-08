@@ -1,19 +1,10 @@
-import React from "react";
 import { Users, Calendar, DollarSign } from "lucide-react";
 import Button from "../../../components/common/Button";
 
-interface GroupCardProps {
-  id: string;
-  tourName: string;
-  currentMembers: number;
-  minRequired: number;
-  maxSize: number;
-  startDate: string;
-  pricePerPerson: number;
-  daysLeft: number;
-}
+import { GroupCardProps } from "@/interfaces/GroupCard";
+import Link from "next/link";
 
-export function GroupCard({
+function GroupCard({
   tourName,
   currentMembers,
   minRequired,
@@ -29,16 +20,18 @@ export function GroupCard({
     <div className="bg-white rounded-lg border border-merino-200 p-6 hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <h4 className="text-merino-950 mb-2">{tourName}</h4>
+          <h4 className="text-merino-950 mb-2 font-bold text-2xl">
+            {tourName}
+          </h4>
           <div className="flex items-center gap-2 text-sm text-merino-600">
-            <Calendar size={16} />
+            <Calendar />
             <span>Starts {startDate}</span>
           </div>
         </div>
         <div className="text-right">
           <p className="text-sm text-merino-600">Per person</p>
           <p className="text-tahiti-gold-500">
-            ${pricePerPerson.toLocaleString()}
+            ${(pricePerPerson ?? 0).toLocaleString()}
           </p>
         </div>
       </div>
@@ -46,7 +39,7 @@ export function GroupCard({
       <div className="mb-4">
         <div className="flex items-center justify-between text-sm text-merino-700 mb-2">
           <div className="flex items-center gap-2">
-            <Users size={16} />
+            <Users />
             <span>
               {currentMembers} / {maxSize} members
             </span>
@@ -70,14 +63,17 @@ export function GroupCard({
 
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 text-sm">
-          <DollarSign size={16} className="text-merino-600" />
+          <DollarSign className="text-merino-600" />
           <span className="text-merino-700">
-            Save ${((maxSize - currentMembers) * 50).toLocaleString()} if full
+            Save ${((maxSize - currentMembers || 0) * 50).toLocaleString()} if
+            full
           </span>
         </div>
-        <Button variant="primary" size="sm">
-          Join Group
-        </Button>
+        <Link href="/messages">
+          <Button variant="primary" size="sm" className="rounded-lg">
+            Join Group
+          </Button>
+        </Link>
       </div>
 
       {daysLeft <= 7 && (
@@ -88,3 +84,5 @@ export function GroupCard({
     </div>
   );
 }
+
+export default GroupCard;

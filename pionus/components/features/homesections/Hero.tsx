@@ -1,6 +1,6 @@
 import React from "react";
-import background from "../../public/elephants.jpg";
-import Button from "../common/Button";
+import background from "../../../public/elephants.jpg";
+import Button from "../../common/Button";
 import { Search, Users } from "lucide-react";
 import AppImage from "@/components/common/AppImage";
 import Link from "next/link";

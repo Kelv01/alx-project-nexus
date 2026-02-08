@@ -2,14 +2,14 @@ import AppImage from "@/components/common/AppImage";
 import background from "../../public/about/nightforest.jpeg";
 import Link from "next/link";
 import Button from "@/components/common/Button";
-import OurStory from "@/pages/about/components/OurStory";
-import Mission from "@/pages/about/components/Mission";
-import Corevalues from "@/pages/about/components/Corevalues";
-import WhatsetsUsApart from "@/pages/about/components/WhatsetsUsApart";
-import ImpactStats from "@/pages/about/components/ImpactStats";
-import Team from "@/pages/about/components/Team";
+import OurStory from "@/components/features/aboutSections/OurStory";
+import Mission from "@/components/features/aboutSections/Mission";
+import Corevalues from "@/components/features/aboutSections/Corevalues";
+import WhatsetsUsApart from "@/components/features/aboutSections/WhatsetsUsApart";
+import ImpactStats from "@/components/features/aboutSections/ImpactStats";
+import Team from "@/components/features/aboutSections/Team";
 import Cta from "@/components/common/Cta";
-import Conservation from "@/pages/about/components/Conservation";
+import Conservation from "@/components/features/aboutSections/Conservation";
 
 function AboutPage() {
   return (

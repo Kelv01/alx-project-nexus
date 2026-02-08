@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from "react";
-import TourCard from "./components/TourCard";
-import FilterSidebar from "./components/FilterSidebar";
 
 import { getAllTours } from "../../lib/api/tours";
 import { GetStaticProps } from "next";
 
 import type { Tour } from "@/types/tour";
+import FilterSidebar from "@/components/features/toursSections/FilterSidebar";
+import TourCard from "@/components/features/toursSections/TourCard";
 
 type Props = {
   tours: Tour[];

@@ -1,10 +1,10 @@
 import Button from "@/components/common/Button";
 import Cta from "@/components/common/Cta";
-import FeaturedTours from "@/components/homesections/FeaturedTours";
-import Hero from "@/components/homesections/Hero";
-import HowItWoks from "@/components/homesections/HowItWoks";
-import Testimonial from "@/components/homesections/Testimonial";
-import WhyChoosePionusSafari from "@/components/homesections/WhyChoosePionusSafari";
+import FeaturedTours from "@/components/features/homesections/FeaturedTours";
+import Hero from "@/components/features/homesections/Hero";
+import HowItWoks from "@/components/features/homesections/HowItWoks";
+import Testimonial from "@/components/features/homesections/Testimonial";
+import WhyChoosePionusSafari from "@/components/features/homesections/WhyChoosePionusSafari";
 import Link from "next/link";
 
 export default function Home() {

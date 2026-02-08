@@ -1,6 +1,6 @@
 import { Search } from "lucide-react";
 import { openGroups } from "../../data/tours";
-import GroupCard from "@/pages/groups/components/GroupCard";
+import GroupCard from "@/components/features/groupsSections/GroupCard";
 
 function Groupspage() {
   return (

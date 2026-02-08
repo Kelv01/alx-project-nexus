@@ -17,7 +17,7 @@ function login() {
           <div className="text-center mb-8">
             <Link href="/" className="inline-flex items-center gap-2 mb-6">
               <Bird className="text-merino-600 h-8 w-8" />
-              <h1 className="text-black text-2xl font-poppins font-bold">
+              <h1 className="text-black text-4xl font-poppins font-bold">
                 Pionus Safaris
               </h1>
             </Link>

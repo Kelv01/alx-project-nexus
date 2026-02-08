@@ -45,62 +45,78 @@ All data is currently mock-driven, and backend services are intentionally deferr
 ## Project Structure
 
 ```
+//
 pionus/
 ├── components/
-│   ├── common/
-│   │   ├── AppImage.tsx
-│   │   ├── Button.tsx
-│   │   └── Cta.tsx
-│   ├── homesections/
-│   │   ├── FeaturedTours.tsx
-│   │   ├── Hero.tsx
-│   │   ├── HowItWoks.tsx
-│   │   ├── Testimonial.tsx
-│   │   └── WhyChoosePionusSafari.tsx
-│   ├── layout/
-│   │   ├── Footer.tsx
-│   │   ├── Header.tsx
-│   │   └── Layout.tsx
+│ ├── common/
+│ │ ├── AppImage.tsx
+│ │ ├── Button.tsx
+│ │ └── Cta.tsx
+│ ├── features/
+│ │ ├── aboutSections/
+│ │ │ ├── OurStory.tsx
+│ │ │ ├── Mission.tsx
+│ │ │ ├── Corevalues.tsx
+│ │ │ ├── WhatsetsUsApart.tsx
+│ │ │ ├── ImpactStats.tsx
+│ │ │ └── Team.tsx
+│ │ └── toursSections/
+│ │ ├── TourHero.tsx
+│ │ ├── TourTabs.tsx
+│ │ ├── TourSidebar.tsx
+│ │ ├── TourCard.tsx
+│ │ └── TourGroupCard.tsx
+│ ├── homesections/
+│ │ ├── FeaturedTours.tsx
+│ │ ├── Hero.tsx
+│ │ ├── HowItWoks.tsx
+│ │ ├── Testimonial.tsx
+│ │ └── WhyChoosePionusSafari.tsx
+│ └── layout/
+│ ├── Footer.tsx
+│ ├── Header.tsx
+│ ├── Layout.tsx
+│ └── Errorboundary.tsx
 ├── constants/
-│   └── nav_links.ts
+│ └── nav_links.ts
 ├── data/
-│   ├── testimonial.ts
-│   └── tours.ts
+│ ├── testimonial.ts
+│ └── tours.ts
 ├── interfaces/
-│   ├── button.ts
-│   ├── GroupCard.ts
-│   ├── Testimonial.ts
-│   └── TourCardProps.ts
+│ ├── button.ts
+│ ├── GroupCard.ts
+│ ├── Testimonial.ts
+│ └── TourCardProps.ts
 ├── lib/
-│   └── api/
-│       └── tours.ts
+│ └── api/
+│ └── tours.ts
 ├── pages/
-│   ├── _app.tsx
-│   ├── _document.tsx
-│   ├── index.tsx
-│   ├── 404.tsx
-│   ├── auth/
-│   │   ├── login.tsx
-│   │   └── register.tsx
-│   ├── about/
-│   │   ├── index.tsx
-│   │   └── components/
-│   ├── messages/
-│   │   └── message.tsx
-│   ├── tours/
-│   │   ├── index.tsx
-│   │   ├── [tourid].tsx
-│   │   └── components/
-│   └── legal/
-│       ├── privacy.tsx
-│       └── terms.tsx
+│ ├── _app.tsx
+│ ├── _document.tsx
+│ ├── index.tsx
+│ ├── 404.tsx
+│ ├── auth/
+│ │ ├── login.tsx
+│ │ └── register.tsx
+│ ├── about/
+│ │ └── index.tsx
+│ ├── messages/
+│ │ ├── index.tsx
+│ │ └── message.tsx
+│ ├── tours/
+│ │ ├── index.tsx
+│ │ ├── [tourid].tsx
+│ │ └── components/ (refer to components/features/toursSections)
+│ └── legal/
+│ ├── privacy.tsx
+│ └── terms.tsx
 ├── public/
-│   ├── about/
-│   ├── guides/
-│   ├── testimonial/
-│   └── tours/
+│ ├── about/
+│ ├── guides/
+│ ├── testimonial/
+│ └── tours/
 ├── styles/
-│   └── globals.css
+│ └── globals.css
 ├── next.config.ts
 ├── tsconfig.json
 ├── package.json

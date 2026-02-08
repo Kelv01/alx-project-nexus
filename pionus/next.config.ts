@@ -9,7 +9,13 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 64, 128, 256],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: false,
-    domains: ["images.unsplash.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
