@@ -3,7 +3,7 @@
 A modern **frontend web platform** for discovering, organizing, and preparing safari tour bookings in East Africa.  
 Built with **Next.js (Pages Router)** and **TypeScript**, this project focuses on scalable UI architecture, strong typing, and clean separation of concerns — while remaining fully backend-ready.
 
-**Live Demo (placeholder):**  
+**Live Demo:**  
 https://alx-project-nexus-pionus-safaris.vercel.app/
 
 ---
